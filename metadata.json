@@ -1,0 +1,6 @@
+{
+  "name": "PromptFlow - AI Workflow & Master Prompt Studio",
+  "description": "Copy master AI workflows for UGC Ads, 3D Motion Graphics, Omni Flash videos, and image generation in one click for ChatGPT, Claude, and Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
