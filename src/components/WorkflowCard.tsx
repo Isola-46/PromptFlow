@@ -77,9 +77,32 @@ export const WorkflowCard: React.FC<WorkflowCardProps> = ({
         </p>
 
         {/* Description */}
-        <p className="text-sm text-neutral-300 line-clamp-3 leading-relaxed mb-5">
+        <p className="text-sm text-neutral-300 line-clamp-3 leading-relaxed mb-4">
           {workflow.description}
         </p>
+
+        {/* Multi-Part Indicator with Hard Divider Lines */}
+        {workflow.part1Prompt && workflow.part2Prompt && (
+          <div className="mb-4 rounded-lg border border-neutral-700/80 bg-[#090e18] overflow-hidden text-[11px]">
+            <div className="px-2.5 py-1 bg-neutral-900 border-b border-neutral-800 flex items-center justify-between text-[10px] font-bold text-neutral-400 uppercase">
+              <span>{workflow.part3Prompt ? '3-Part Master Pipeline' : '2-Part Master Pipeline'}</span>
+              <span className="text-emerald-400 font-mono">Hard-Delimited</span>
+            </div>
+            <div className="grid grid-cols-3 text-center py-1.5 px-1 bg-neutral-950/60">
+              <div className="px-1 text-emerald-400 font-medium truncate">
+                <span className="font-bold">P1:</span> Story
+              </div>
+              <div className="px-1 text-cyan-400 font-medium truncate border-l border-neutral-700">
+                <span className="font-bold">P2:</span> Sheets
+              </div>
+              {workflow.part3Prompt && (
+                <div className="px-1 text-purple-400 font-medium truncate border-l border-neutral-700">
+                  <span className="font-bold">P3:</span> Video
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
 
       <div>

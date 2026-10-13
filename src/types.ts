@@ -37,6 +37,12 @@ export interface WorkflowPrompt {
   masterPromptText: string;
   rawCopyableText: string;
   fullDocumentText?: string;
+  part1Title?: string;
+  part1Prompt?: string;
+  part2Title?: string;
+  part2Prompt?: string;
+  part3Title?: string;
+  part3Prompt?: string;
   subPrompts?: {
     title: string;
     description: string;

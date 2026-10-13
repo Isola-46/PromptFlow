@@ -36,6 +36,10 @@ export const WorkflowDetailModal: React.FC<WorkflowDetailModalProps> = ({
   const [activeTab, setActiveTab] = useState<'prompt' | 'workflow' | 'document' | 'customize' | 'subprompts'>('prompt');
   const [copiedMaster, setCopiedMaster] = useState(false);
   const [copiedFull, setCopiedFull] = useState(false);
+  const [copiedPart1, setCopiedPart1] = useState(false);
+  const [copiedPart2, setCopiedPart2] = useState(false);
+  const [copiedPart3, setCopiedPart3] = useState(false);
+  const [partDisplayMode, setPartDisplayMode] = useState<'divided' | 'continuous'>('divided');
   const [copiedSub, setCopiedSub] = useState<number | null>(null);
 
   // Variable customizer state
@@ -55,6 +59,36 @@ export const WorkflowDetailModal: React.FC<WorkflowDetailModalProps> = ({
       }
     });
     return text;
+  };
+
+  const handleCopyPart1 = async () => {
+    if (!workflow.part1Prompt) return;
+    const success = await copyToClipboard(workflow.part1Prompt);
+    if (success) {
+      setCopiedPart1(true);
+      onShowToast('Part 1 (Story Scriptwriter) copied to clipboard! Paste into ChatGPT or Claude.');
+      setTimeout(() => setCopiedPart1(false), 2200);
+    }
+  };
+
+  const handleCopyPart2 = async () => {
+    if (!workflow.part2Prompt) return;
+    const success = await copyToClipboard(workflow.part2Prompt);
+    if (success) {
+      setCopiedPart2(true);
+      onShowToast('Part 2 (5 Stickman Character Sheets) copied to clipboard!');
+      setTimeout(() => setCopiedPart2(false), 2200);
+    }
+  };
+
+  const handleCopyPart3 = async () => {
+    if (!workflow.part3Prompt) return;
+    const success = await copyToClipboard(workflow.part3Prompt);
+    if (success) {
+      setCopiedPart3(true);
+      onShowToast('Part 3 (Omni Flesh 10-Second Video Prompts) copied to clipboard!');
+      setTimeout(() => setCopiedPart3(false), 2200);
+    }
   };
 
   const handleCopyMaster = async () => {
@@ -319,6 +353,101 @@ export const WorkflowDetailModal: React.FC<WorkflowDetailModalProps> = ({
                 </ol>
               </div>
 
+              {/* Multi-Part Quick Action & Mode Toolbar */}
+              {workflow.part1Prompt && workflow.part2Prompt && (
+                <div className="space-y-3 p-4 rounded-xl bg-neutral-900/90 border border-neutral-800">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-xs font-bold text-neutral-300 uppercase tracking-wider flex items-center gap-1.5">
+                      <Layers className="w-3.5 h-3.5 text-emerald-400" />
+                      <span>{workflow.part3Prompt ? '3-Part Master Pipeline' : '2-Part Master Pipeline'}</span>
+                    </span>
+
+                    {/* View mode toggle */}
+                    <div className="flex items-center gap-1 bg-neutral-950 p-1 rounded-lg border border-neutral-800 text-[11px] font-semibold">
+                      <button
+                        onClick={() => setPartDisplayMode('divided')}
+                        className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                          partDisplayMode === 'divided'
+                            ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
+                            : 'text-neutral-400 hover:text-neutral-200'
+                        }`}
+                      >
+                        Divided (Hard Lines)
+                      </button>
+                      <button
+                        onClick={() => setPartDisplayMode('continuous')}
+                        className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                          partDisplayMode === 'continuous'
+                            ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
+                            : 'text-neutral-400 hover:text-neutral-200'
+                        }`}
+                      >
+                        Continuous Stream
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* 1-Click Part Copy Buttons */}
+                  <div className="flex flex-wrap items-center gap-2 pt-1">
+                    <button
+                      onClick={handleCopyPart1}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                        copiedPart1
+                          ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
+                          : 'bg-neutral-800 hover:bg-neutral-700 text-emerald-300 border border-emerald-500/30'
+                      }`}
+                    >
+                      {copiedPart1 ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                      <span>{copiedPart1 ? 'Part 1 Copied!' : 'Copy Part 1: Story Script'}</span>
+                    </button>
+
+                    <button
+                      onClick={handleCopyPart2}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                        copiedPart2
+                          ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40'
+                          : 'bg-neutral-800 hover:bg-neutral-700 text-cyan-300 border border-cyan-500/30'
+                      }`}
+                    >
+                      {copiedPart2 ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                      <span>{copiedPart2 ? 'Part 2 Copied!' : 'Copy Part 2: Character Sheets'}</span>
+                    </button>
+
+                    {workflow.part3Prompt && (
+                      <button
+                        onClick={handleCopyPart3}
+                        className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                          copiedPart3
+                            ? 'bg-purple-500/20 text-purple-300 border border-purple-500/40'
+                            : 'bg-neutral-800 hover:bg-neutral-700 text-purple-300 border border-purple-500/30'
+                        }`}
+                      >
+                        {copiedPart3 ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                        <span>{copiedPart3 ? 'Part 3 Copied!' : 'Copy Part 3: Video Prompts'}</span>
+                      </button>
+                    )}
+
+                    <button
+                      onClick={handleCopyMaster}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                        copiedMaster
+                          ? 'bg-emerald-500/30 text-emerald-200 border border-emerald-500/50'
+                          : 'bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/40'
+                      }`}
+                    >
+                      {copiedMaster ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                      <span>
+                        {copiedMaster
+                          ? 'All Parts Copied!'
+                          : workflow.part3Prompt
+                          ? 'Copy Complete Suite (Parts 1, 2 & 3)'
+                          : 'Copy Complete Suite (Parts 1 & 2)'}
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              )}
+
               {/* BOUNDED COPY CONTAINER WITH GREEN TOP BAR AND RED BOTTOM BAR */}
               <div className="relative rounded-xl overflow-hidden border border-neutral-700/80 shadow-lg">
                 {/* GREEN START COPYING BAR */}
@@ -336,12 +465,135 @@ export const WorkflowDetailModal: React.FC<WorkflowDetailModalProps> = ({
                   </button>
                 </div>
 
-                {/* THE MASTER PROMPT TEXT BOX */}
-                <div className="relative bg-[#090d16] p-4 sm:p-6 max-h-[500px] overflow-y-auto font-mono text-xs sm:text-[13px] leading-relaxed text-neutral-200 select-all border-x border-neutral-800">
-                  <pre className="whitespace-pre-wrap font-mono break-words">
-                    {workflow.masterPromptText}
-                  </pre>
-                </div>
+                {/* THE PROMPT CONTENT: EITHER DIVIDED BY HARD LINES OR CONTINUOUS STREAM */}
+                {workflow.part1Prompt && workflow.part2Prompt && partDisplayMode === 'divided' ? (
+                  <div className="bg-[#090d16] border-x border-neutral-800">
+                    {/* SECTION: PART 1 */}
+                    <div className="p-4 sm:p-6 bg-[#0a0f1d]/90">
+                      <div className="flex flex-wrap items-center justify-between gap-2 pb-3 mb-3 border-b border-neutral-800">
+                        <div className="flex items-center gap-2">
+                          <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                            Part 1
+                          </span>
+                          <h4 className="text-xs sm:text-sm font-bold text-white">
+                            {workflow.part1Title || 'YouTube Documentary Story Scriptwriter'}
+                          </h4>
+                        </div>
+                        <button
+                          onClick={handleCopyPart1}
+                          className="flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded bg-neutral-800 hover:bg-neutral-700 text-emerald-300 border border-emerald-500/30 transition-colors cursor-pointer"
+                        >
+                          <Copy className="w-3 h-3" />
+                          <span>{copiedPart1 ? 'Copied Part 1' : 'Copy Part 1 Only'}</span>
+                        </button>
+                      </div>
+                      <pre className="whitespace-pre-wrap font-mono text-xs sm:text-[13px] leading-relaxed text-neutral-200 break-words select-all max-h-[360px] overflow-y-auto">
+                        {workflow.part1Prompt}
+                      </pre>
+                    </div>
+
+                    {/* HARD LINE DIVIDER BETWEEN PART 1 AND PART 2 */}
+                    <div className="relative border-y-4 border-amber-500 bg-neutral-950 text-neutral-100 px-4 py-3 select-none">
+                      <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+                        <div className="flex items-center gap-2 font-mono font-black text-xs sm:text-sm text-amber-400 tracking-wider uppercase">
+                          <span className="text-base">⛔</span>
+                          <span>END OF PART 1: STORY SCRIPTWRITER</span>
+                        </div>
+                        <div className="h-0.5 sm:h-auto sm:w-px bg-amber-500/40" />
+                        <div className="text-[11px] font-semibold text-neutral-300">
+                          Part 1 ends here ── Paste story output into Part 2 below
+                        </div>
+                        <div className="h-0.5 sm:h-auto sm:w-px bg-amber-500/40" />
+                        <div className="flex items-center gap-2 font-mono font-black text-xs sm:text-sm text-cyan-400 tracking-wider uppercase">
+                          <span>START OF PART 2: 5 CHARACTER SHEETS</span>
+                          <span className="text-base">▶</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* SECTION: PART 2 */}
+                    <div className="p-4 sm:p-6 bg-[#0a1220]/90">
+                      <div className="flex flex-wrap items-center justify-between gap-2 pb-3 mb-3 border-b border-neutral-800">
+                        <div className="flex items-center gap-2">
+                          <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+                            Part 2
+                          </span>
+                          <h4 className="text-xs sm:text-sm font-bold text-white">
+                            {workflow.part2Title || '5 Unique Stickman Character Sheet Prompts'}
+                          </h4>
+                        </div>
+                        <button
+                          onClick={handleCopyPart2}
+                          className="flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded bg-neutral-800 hover:bg-neutral-700 text-cyan-300 border border-cyan-500/30 transition-colors cursor-pointer"
+                        >
+                          <Copy className="w-3 h-3" />
+                          <span>{copiedPart2 ? 'Copied Part 2' : 'Copy Part 2 Only'}</span>
+                        </button>
+                      </div>
+                      <pre className="whitespace-pre-wrap font-mono text-xs sm:text-[13px] leading-relaxed text-neutral-200 break-words select-all max-h-[360px] overflow-y-auto">
+                        {workflow.part2Prompt}
+                      </pre>
+                    </div>
+
+                    {/* IF PART 3 EXISTS: HARD LINE DIVIDER BETWEEN PART 2 AND PART 3 */}
+                    {workflow.part3Prompt && (
+                      <>
+                        <div className="relative border-y-4 border-purple-500 bg-neutral-950 text-neutral-100 px-4 py-3 select-none">
+                          <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+                            <div className="flex items-center gap-2 font-mono font-black text-xs sm:text-sm text-cyan-400 tracking-wider uppercase">
+                              <span className="text-base">⛔</span>
+                              <span>END OF PART 2: CHARACTER SHEETS</span>
+                            </div>
+                            <div className="h-0.5 sm:h-auto sm:w-px bg-purple-500/40" />
+                            <div className="text-[11px] font-semibold text-neutral-300">
+                              Part 2 ends here ── Reference sheets in Part 3 below
+                            </div>
+                            <div className="h-0.5 sm:h-auto sm:w-px bg-purple-500/40" />
+                            <div className="flex items-center gap-2 font-mono font-black text-xs sm:text-sm text-purple-400 tracking-wider uppercase">
+                              <span>START OF PART 3: VIDEO PROMPT GENERATOR</span>
+                              <span className="text-base">▶</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* SECTION: PART 3 */}
+                        <div className="p-4 sm:p-6 bg-[#100a1d]/90">
+                          <div className="flex flex-wrap items-center justify-between gap-2 pb-3 mb-3 border-b border-neutral-800">
+                            <div className="flex items-center gap-2">
+                              <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                                Part 3
+                              </span>
+                              <h4 className="text-xs sm:text-sm font-bold text-white">
+                                {workflow.part3Title || 'Stickman Script to 10-Second Video Prompts (Omni Flesh)'}
+                              </h4>
+                            </div>
+                            <button
+                              onClick={handleCopyPart3}
+                              className="flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded bg-neutral-800 hover:bg-neutral-700 text-purple-300 border border-purple-500/30 transition-colors cursor-pointer"
+                            >
+                              <Copy className="w-3 h-3" />
+                              <span>{copiedPart3 ? 'Copied Part 3' : 'Copy Part 3 Only'}</span>
+                            </button>
+                          </div>
+                          <pre className="whitespace-pre-wrap font-mono text-xs sm:text-[13px] leading-relaxed text-neutral-200 break-words select-all max-h-[360px] overflow-y-auto">
+                            {workflow.part3Prompt}
+                          </pre>
+                        </div>
+
+                        {/* FINAL HARD END LINE */}
+                        <div className="border-t-4 border-rose-600 bg-neutral-950 px-4 py-2.5 text-center text-rose-300 font-mono text-xs font-bold tracking-wider select-none">
+                          🏁 END OF PART 3 ── ALL 3 PARTS OF STICKMAN ANIMATION MASTER COMPLETE 🏁
+                        </div>
+                      </>
+                    )}
+                  </div>
+                ) : (
+                  <div className="relative bg-[#090d16] p-4 sm:p-6 max-h-[500px] overflow-y-auto font-mono text-xs sm:text-[13px] leading-relaxed text-neutral-200 select-all border-x border-neutral-800">
+                    <pre className="whitespace-pre-wrap font-mono break-words">
+                      {workflow.masterPromptText}
+                    </pre>
+                  </div>
+                )}
 
                 {/* RED STOP COPYING BAR */}
                 <div className="flex items-center justify-between px-4 py-2.5 bg-rose-800 text-rose-50 text-xs sm:text-sm font-bold tracking-wider uppercase select-none">

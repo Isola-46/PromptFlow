@@ -40,7 +40,7 @@ export default function App() {
     } catch {
       // fallback
     }
-    return ['ugc-creative-director'];
+    return ['ultimate-stickman-animation-master', 'motion-graphic-creation-engine', 'ugc-creative-director'];
   });
 
   const [selectedCategory, setSelectedCategory] = useState<WorkflowCategory | 'favorites'>('all');
@@ -113,7 +113,15 @@ export default function App() {
     });
   }, [workflows, selectedCategory, searchQuery, favorites]);
 
-  const featuredUgcWorkflow = workflows.find((w) => w.id === 'ugc-creative-director') || workflows[0];
+  const [featuredWorkflowId, setFeaturedWorkflowId] = useState<string>('ultimate-stickman-animation-master');
+
+  const featuredList = useMemo(() => {
+    return workflows.filter((w) => w.isFeatured);
+  }, [workflows]);
+
+  const activeFeaturedWorkflow = useMemo(() => {
+    return workflows.find((w) => w.id === featuredWorkflowId) || workflows[0];
+  }, [workflows, featuredWorkflowId]);
 
   return (
     <div className="min-h-screen bg-[#0b0f19] text-neutral-100 flex flex-col font-sans selection:bg-emerald-500/30 selection:text-emerald-200">
@@ -126,10 +134,13 @@ export default function App() {
 
       {/* Main Viewport Content */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-8">
-        {/* Spotlight Featured UGC Master Workflow */}
+        {/* Spotlight Featured Master Workflow */}
         {selectedCategory === 'all' && !searchQuery && (
           <FeaturedHero
-            workflow={featuredUgcWorkflow}
+            workflow={activeFeaturedWorkflow}
+            featuredList={featuredList}
+            activeWorkflowId={featuredWorkflowId}
+            onSelectWorkflowId={setFeaturedWorkflowId}
             onOpenDetails={(w) => setSelectedWorkflow(w)}
             onShowToast={showToast}
           />
