@@ -36,11 +36,14 @@ export default function App() {
   const [favorites, setFavorites] = useState<string[]>(() => {
     try {
       const stored = localStorage.getItem(FAVORITES_STORAGE_KEY);
-      if (stored) return JSON.parse(stored);
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        return parsed.map((id: string) => id === 'ultimate-stickman-animation-master' ? 'ai-cinematic-film-master' : id);
+      }
     } catch {
       // fallback
     }
-    return ['ultimate-stickman-animation-master', 'motion-graphic-creation-engine', 'ugc-creative-director'];
+    return ['ai-cinematic-film-master', 'motion-graphic-creation-engine', 'ugc-creative-director'];
   });
 
   const [selectedCategory, setSelectedCategory] = useState<WorkflowCategory | 'favorites'>('all');
@@ -113,14 +116,14 @@ export default function App() {
     });
   }, [workflows, selectedCategory, searchQuery, favorites]);
 
-  const [featuredWorkflowId, setFeaturedWorkflowId] = useState<string>('ultimate-stickman-animation-master');
+  const [featuredWorkflowId, setFeaturedWorkflowId] = useState<string>('ai-cinematic-film-master');
 
   const featuredList = useMemo(() => {
     return workflows.filter((w) => w.isFeatured);
   }, [workflows]);
 
   const activeFeaturedWorkflow = useMemo(() => {
-    return workflows.find((w) => w.id === featuredWorkflowId) || workflows[0];
+    return workflows.find((w) => w.id === featuredWorkflowId) || workflows.find((w) => w.isFeatured) || workflows[0];
   }, [workflows, featuredWorkflowId]);
 
   return (

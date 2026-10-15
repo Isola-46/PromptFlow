@@ -7250,40 +7250,6 @@ After I paste the script, immediately analyze it and begin converting it into th
     ]
   },
   {
-    id: 'ai-image-luxury-product-macro',
-    title: 'LUXURY E-COMMERCE PRODUCT & MACRO TEXTURE',
-    subtitle: 'Commercial Studio Staging & Tactile Texture Reference Prompt',
-    category: 'image-generation',
-    categoryLabel: 'Image Generation',
-    description: 'Generates editorial-grade product photography on travertine, water ripple reflections, or brushed titanium with hyper-accurate surface textures and commercial studio lighting.',
-    targetTools: ['Midjourney', 'Flux.1', 'ChatGPT', 'Imagen'],
-    isFeatured: false,
-    estimatedOutput: '4:3 & 16:9 Commercial Grade Product Key Visuals',
-    bestFor: ['E-commerce Stores', 'Shopify Hero Banners', 'Brand Campaigns', 'Amazon A+ Content'],
-    howToUseSteps: [
-      'Copy the Luxury Product Prompt below.',
-      'Replace [PRODUCT DESCRIPTION] with your physical item.',
-      'Paste into Midjourney v6.1 or Flux Dev.',
-      'Receive commercial-grade studio photography ready for landing pages and ads.'
-    ],
-    startCopyMarker: '▶  START COPYING HERE  ▶',
-    stopCopyMarker: '■  STOP COPYING HERE  ■',
-    masterPromptText: `Commercial studio still-life product photography of [PRODUCT DESCRIPTION], placed elegantly on a sculptured raw travertine stone pedestal. Soft diffused morning side-lighting creating gentle directional shadows, subtle atmospheric caustic water reflections shimmering on background surface, shallow depth of field f/2.8, 85mm prime lens perspective, ultra-detailed tactile material textures, crisp label typography and metallic accents, minimalist luxury aesthetic, Hasselblad medium format photography, 8k resolution.
-NEGATIVE PROMPT:
-cluttered composition, harsh direct flash, oversaturated colors, cheap plastic props, low resolution, blown-out highlights, deformed packaging, blurry typography, dust artifacts. --ar 4:3 --stylize 150`,
-    rawCopyableText: `Commercial studio still-life product photography of [PRODUCT DESCRIPTION], placed elegantly on a sculptured raw travertine stone pedestal. Soft diffused morning side-lighting creating gentle directional shadows, subtle atmospheric caustic water reflections shimmering on background surface, shallow depth of field f/2.8, 85mm prime lens perspective, ultra-detailed tactile material textures, crisp label typography and metallic accents, minimalist luxury aesthetic, Hasselblad medium format photography, 8k resolution.
-NEGATIVE PROMPT:
-cluttered composition, harsh direct flash, oversaturated colors, cheap plastic props, low resolution, blown-out highlights, deformed packaging, blurry typography, dust artifacts. --ar 4:3 --stylize 150`,
-    customizableVariables: [
-      {
-        key: 'PRODUCT_DESCRIPTION',
-        label: 'Product Details',
-        placeholder: 'e.g. Frosted amber glass botanical face serum bottle with gold dropper pipette',
-        defaultValue: 'Frosted amber glass botanical face serum bottle with gold dropper pipette'
-      }
-    ]
-  },
-  {
     id: 'omni-flash-video-flow-director',
     title: 'OMNI FLASH VERTICAL VIDEO PROMPT SUITE',
     subtitle: 'Seamless Multi-Shot Scripting & Continuous Camera Handoff Engine',
@@ -7368,59 +7334,3737 @@ Then generate every prompt in individual code blocks ready for instant pasting i
         defaultValue: ''
       }
     ]
-  },
+  }
+,
   {
-    id: 'tiktok-viral-3hook-generator',
-    title: 'TIKTOK UGC 3-HOOK & AD SCRIPT ENGINE',
-    subtitle: 'High-Retention Scroll-Stopping UGC Openers & Direct Response Scripts',
-    category: 'ugc-ads',
-    categoryLabel: 'AI UGC Ads',
-    description: 'Generates 3 psychologically engineered visual & spoken hooks for the first 3 seconds, followed by high-converting UGC script variants: "Relatable Problem", "Confession/Secret", and "Shock Value".',
-    targetTools: ['ChatGPT', 'Claude', 'Gemini'],
-    isFeatured: false,
-    estimatedOutput: '3 Scroll-Stopping Hooks + Complete 30-Second UGC Scripts with Action Cues',
-    bestFor: ['TikTok Spark Ads', 'Instagram Reels Testing', 'Dropshipping & DTC'],
+    id: 'ai-cinematic-film-director-master',
+    title: '🎬 AI CINEMATIC FILM — MASTER SUITE (PARTS 1, 2 & 3)',
+    subtitle: 'Screenplay (Part 1) + Character Turnarounds (Part 2) + Shot Composition Engine (Part 3)',
+    category: 'video-ai',
+    categoryLabel: 'Video & Animation',
+    description: 'Complete 3-part Hollywood AI film studio: Part 1 guides you stage-by-stage from 10 high-hook concepts to confirmed story and full screenplay; Part 2 extracts characters/creatures, locks Visual DNA (age 18+), and generates multi-angle turnaround reference sheets; Part 3 acts as your Hollywood director & cinematographer, decomposing visual beats into 16:9 photorealistic scene prompts with camera lenses, lighting, and strict continuity.',
+    targetTools: ['ChatGPT', 'Claude', 'Gemini', 'Midjourney', 'Runway', 'Sora', 'Kling'],
+    isFeatured: true,
+    estimatedOutput: '10 Concepts + Screenplay + Multi-Angle Turnaround Sheets + 5 Batched Cinematic Compositions per Scene',
+    bestFor: ['AI Short Films', 'Cinematic Screenwriting', 'Character Turnaround Sheets', 'Hollywood Shot Compositions', 'Indie AI Filmmakers'],
     howToUseSteps: [
-      'Copy the Master 3-Hook Prompt.',
-      'Paste into ChatGPT or Claude.',
-      'Provide your product and biggest customer pain point.',
-      'Get 3 tested hook styles with exact visual cues and spoken scripts.'
+      'Step 1 (Generate Screenplay): Copy Part 1 (Concept Ideation, Story Architecture & Screenplay) into ChatGPT or Claude to develop your high-hook story and complete screenplay.',
+      'Step 2 (Generate Character Sheets): Copy Part 2 (Character Sheet Master Prompt) and paste your completed screenplay to extract every character and creature into multi-angle turnaround prompts.',
+      'Step 3 (Generate Cinematic Compositions): Copy Part 3 (Hollywood Shot Composition Engine) and provide your story + character sheets to receive 5 sequential 16:9 cinematic shot compositions with camera lenses, lighting, and visual continuity.'
     ],
-    startCopyMarker: '▶  START COPYING HERE  ▶',
-    stopCopyMarker: '■  STOP COPYING HERE  ■',
-    masterPromptText: `TIKTOK & REELS 3-HOOK DIRECT RESPONSE AD ENGINE
-Act as a top 1% TikTok creative strategist and direct-response UGC copywriter. For any product I give you, your task is to generate 3 distinct, high-converting 30-second UGC ad scripts engineered to maximize thumb-stop rate (3s retention) and click-through conversions.
+    stages: [
+      {
+        stageNumber: 1,
+        name: 'Film Idea Generation',
+        aiAsks: 'Generates 10 original cinematic film concepts featuring strong first-frame hooks, 4-8 characters max, and deep emotional cores.',
+        userGets: '10 original concepts with Title, Opening Hook, Premise, Emotional Core, and Conflict.'
+      },
+      {
+        stageNumber: 2,
+        name: 'Film Length Selection',
+        aiAsks: 'Asks you to select target runtime: 3m, 5m, 7m, 10m, 15m, 30m, or up to 1 hour.',
+        userGets: 'Calibrated duration constraint and pacing structure.'
+      },
+      {
+        stageNumber: 3,
+        name: 'Story Generation (Visual Architecture)',
+        aiAsks: 'Builds complete cinematic story using the Hook → Mystery → Discovery → Emotional Bond → Escalation → Revelation → Conflict → Climax → Consequence → Resolution framework.',
+        userGets: 'Full narrative story engineered for visual cinema without unneeded exposition.'
+      },
+      {
+        stageNumber: 4,
+        name: 'Story Revision / Confirmation Loop',
+        aiAsks: 'Asks for modifications, integrates feedback preserving continuity, and loops until explicit "STORY CONFIRMED" approval.',
+        userGets: 'Polished, approved narrative foundation ready for screenplay expansion.'
+      },
+      {
+        stageNumber: 5,
+        name: 'Full Cinematic Script',
+        aiAsks: 'Converts confirmed story into production-ready screenplay with scene structure, locations, time of day, visual action, non-verbal cues, and dialogue.',
+        userGets: 'Complete production screenplay formatted for filming and AI video generation.'
+      },
+      {
+        stageNumber: 6,
+        name: 'Character Analysis & Visual DNA (Part 2)',
+        aiAsks: 'Analyzes completed screenplay, identifies all recurring characters/creatures, and locks immutable visual DNA (exact facial structure, wardrobe, props).',
+        userGets: 'Comprehensive character list with locked visual DNA ensuring 100% film-wide continuity.'
+      },
+      {
+        stageNumber: 7,
+        name: 'Multi-Angle Character Turnarounds (Part 2)',
+        aiAsks: 'Produces copy-ready AI image prompts for front, 3/4, side profile, rear, and close-up views with studio lighting.',
+        userGets: 'Production-ready character turnaround sheet prompts for Midjourney, Flux, and AI video tools.'
+      },
+      {
+        stageNumber: 8,
+        name: 'Visual Beat Breakdown & Compositions (Part 3)',
+        aiAsks: 'Deconstructs story into chronological visual beats, mapping one composition per beat with varied camera angles (wide, medium, close-up, POV).',
+        userGets: 'Structured visual beat map with 5 comprehensive multi-scene compositions.'
+      },
+      {
+        stageNumber: 9,
+        name: 'Hollywood Text-to-Image Engine & Batches (Part 3)',
+        aiAsks: 'Outputs 5 complete compositions at a time with independent 16:9 photorealistic prompts referencing character sheets, then waits for NEXT.',
+        userGets: 'Batched production-ready text-to-image prompts ready to render in Midjourney, Flux, or Stable Diffusion.'
+      }
+    ],
+    startCopyMarker: '▶▶▶ START COPYING AI CINEMATIC FILM 3-PART MASTER SUITE ▶▶▶',
+    stopCopyMarker: '■■■ STOP COPYING HERE — COMPLETE 3-PART MASTER SUITE ■■■',
+    masterPromptText: `🎬 AI CINEMATIC FILM — MASTER PROMPT #PART 1
+ROLE
+Act as an elite cinematic filmmaker, screenwriter, and AI film director specializing in highly engaging, emotionally powerful, visually driven films.
+Guide the user one stage at a time.
+Never skip a stage or proceed without the user's selection/confirmation.
+ 
+1. FILM IDEA GENERATION
+Generate 10 original cinematic film concepts.
+Study the storytelling qualities found across compelling fantasy, sci-fi, creature, survival, mystery, adventure, horror, and emotional films as inspiration.
+Do not copy existing films, plots, characters, scenes, or endings. Combine familiar cinematic ingredients in fresh ways to create original stories.
+EVERY IDEA MUST HAVE A STRONG FIRST-FRAME HOOK
+The film must feel interesting from the very first frame.
+Avoid openings such as:
+Long introductions
+Generic establishing shots
+Ordinary daily life
+Exposition before anything happens
+Characters simply talking about the situation
+Instead, begin with a visually compelling situation already in progress.
+Examples of hook mechanics:
+A pregnant woman fighting wolves in a snowstorm.
+A child discovering something impossible beneath the ice.
+A wounded astronaut crawling toward an unknown creature.
+A mother running through a burning forest while protecting something mysterious.
+A fisherman pulling something impossible from a frozen lake.
+A soldier discovering an apparently harmless creature among the dead.
+The actual ideas must be original.
+STORY DNA
+Prioritize combinations of:
+Immediate danger + mystery + emotional attachment + unusual discovery + escalating conflict + powerful consequence.
+Keep the number of characters to maximum, 4-8 characters including hero, villains, supporting character depending on the story. The less characters the better, so viewers don’t get confused with to many characters.
+Stories should contain several of the following:
+Survival
+Mystery
+Secret
+Supernatural or extraordinary element
+Strong human/creature relationship
+Vulnerable protagonist
+Emotional transformation
+Moral dilemma
+Social conflict
+Betrayal
+Sacrifice
+Loss
+Revenge or consequence
+Major revelation
+Emotional payoff
+RETENTION STRUCTURE
+Every concept should create questions in the audience's mind:
+What is happening?
+→ Why is this happening?
+→ What is being hidden?
+→ What will happen next?
+→ Who can be trusted?
+→ What will this discovery cost?
+Do not reveal everything immediately.
+VISUAL STORYTELLING
+Design stories that can be understood through actions, environments, expressions, and cinematic events, not only dialogue.
+The opening should be capable of becoming a powerful cinematic sequence even with little or no dialogue.
+EMOTIONAL CORE
+Every story must have a strong emotional relationship or emotional question at its center.
+The extraordinary element should matter emotionally.
+A creature, alien, supernatural force, strange child, mysterious object, or impossible event should not exist merely for spectacle—it should affect the characters deeply.
+ORIGINALITY
+Do not repeatedly generate:
+Dragon stories
+Wolf stories
+Mother-and-child stories
+Witch/village stories
+Those are references, not templates.
+Continuously vary:
+Characters
+Relationships
+Creatures
+Worlds
+Conflicts
+Genres
+Settings
+Stakes
+Emotional themes
+The goal is:
+FAMILIAR CINEMATIC APPEAL + ORIGINAL CONCEPT.
+For each idea provide:
+TITLE
+OPENING HOOK
+CORE PREMISE
+EMOTIONAL CORE
+CENTRAL CONFLICT
+Then ask:
+“Which film idea would you like to develop?”
+Wait for the user's selection.
+ 
+2. FILM LENGTH SELECTION
+After the user selects an idea, ask them to choose the film length:
+3 minutes
+5 minutes
+7 minutes
+10 minutes
+15 minutes
+30 minutes
+Up to 1 hour
+Wait for the user's selection.
+ 
+3. STORY GENERATION
+Using the selected idea and film length, generate the complete cinematic story.
+The story must genuinely fit the selected duration.
+CORE RULE
+Show the story. Don't simply explain it.
+Build the film around:
+HOOK → MYSTERY → DISCOVERY → EMOTIONAL BOND → ESCALATION → REVELATION → CONFLICT → CLIMAX → CONSEQUENCE → RESOLUTION
+This is a flexible framework, not a mandatory formula.
+Allow the story to develop naturally.
+For longer films, especially 30 minutes and above, give major visual and emotional sequences enough time to breathe.
+The opening should immediately engage the viewer.
+Do not spend the first several minutes explaining the world before something compelling happens.
+Use:
+Visual action
+Suspense
+Curiosity
+Emotional development
+Progressive reveals
+Character decisions
+Escalating stakes
+Meaningful dialogue
+Strong turning points
+Emotional climax
+Memorable resolution
+The story should feel like a complete cinematic film, not a summary of events.
+After generating the story, ask:
+“Would you like to change or modify anything in the story?”
+ 
+4. STORY REVISION / CONFIRMATION LOOP
+If the user wants changes:
+Ask for their changes or version.
+Integrate their instructions.
+Preserve the strongest elements of the existing story unless the user asks to remove them.
+Maintain continuity and emotional logic.
+Present the complete revised story.
+Ask for confirmation again.
+Repeat until the user explicitly approves the story.
+Once approved, say:
+“STORY CONFIRMED.”
+ 
+5. FULL CINEMATIC SCRIPT
+Only after the story is confirmed, convert it into a complete cinematic screenplay.
+Preserve the approved story while expanding it into production-ready storytelling.
+Include:
+Scene structure
+Locations
+Time of day
+Visual action
+Character actions
+Emotions
+Dialogue
+Non-verbal reactions
+Environmental details
+Dramatic beats
+Transitions
+Cinematic pacing
+The screenplay must not be dialogue-only.
+Write what the audience sees, hears, feels, and experiences.
+Maintain the selected film duration.
+After completing the screenplay, stop and wait for the user's next instruction.
+ 
+IMPORTANT
+At this stage, do not generate:
+Film Bible
+Character sheets
+World sheets
+Cinematography plan
+Storyboards
+Video prompts
+Audio plans
+Editing plans
+Production plans
+Those belong to later stages of the filmmaking workflow.
 
-THE 3 HOOK FRAMEWORKS:
-1. THE VISUAL PATTERN INTERRUPT: Unexpected creator action in first 2 seconds (e.g. dumping bag, shocking prop, extreme close-up).
-2. THE UNCOMFORTABLE TRUTH / CONTROVERSY: Calling out a widespread scam or frustrating daily problem directly ("Nobody talks about why your skin actually looks like this...").
-3. THE "WHY DID NO ONE TELL ME" / CONFESSION: Peer-to-peer discovery format with high authenticity.
+================================================================================
+################################################################################
+════════════════════════════════════════════════════════════════════════════════
+    ⛔ END OF PART 1: CONCEPT IDEATION, STORY ARCHITECTURE & SCREENPLAY ⛔
+────────────────────────────────────────────────────────────────────────────────
+        ▶ START OF PART 2: MULTI-ANGLE CHARACTER SHEET MASTER PROMPT ▶
+════════════════════════════════════════════════════════════════════════════════
+################################################################################
+================================================================================
 
-STRUCTURE FOR EACH SCRIPT:
-- 0:00–0:03: Hook Visual + Hook Spoken Line + Bold Native Text Overlay
-- 0:03–0:12: Relatable Agitation (The problem they feel every day)
-- 0:12–0:22: Product Discovery & Demo in use (Natural, casual creator proof)
-- 0:22–0:30: Soft Casual Call-to-Action ("Check the link in bio before they sell out")
+🎬 AI CINEMATIC FILM — CHARACTER SHEET MASTER PROMPT #PART 2
 
-Ask me:
-"What is your product, who is your customer, and what is the #1 pain point they are desperate to fix?"
-Then wait for my response.`,
-    rawCopyableText: `TIKTOK & REELS 3-HOOK DIRECT RESPONSE AD ENGINE
-Act as a top 1% TikTok creative strategist and direct-response UGC copywriter. For any product I give you, your task is to generate 3 distinct, high-converting 30-second UGC ad scripts engineered to maximize thumb-stop rate (3s retention) and click-through conversions.
+ROLE
+Act as an elite cinematic character designer, concept artist, and AI character-sheet prompt engineer specializing in film production and AI-generated cinema.
+Your job is to take a cinematic script as input, analyze it deeply, identify every relevant character, and create production-ready character references.
+ 
+1. SCRIPT ANALYSIS
+The user will provide a complete cinematic script.
+Analyze the entire script before generating anything.
+Identify every character involved in the story, including:
+Main characters
+Supporting characters
+Minor recurring characters
+Children
+Creatures
+Animals with meaningful story roles
+Antagonists
+Groups only when they function as identifiable recurring characters
+Do not create unnecessary characters that are not supported by the script.
+ 
+2. CHARACTER IDENTIFICATION
+Create a complete character list.
+For every character, determine from the script:
+Name
+Age(character age must not be less than 18)
+Gender
+Role in the story
+Relationship to other characters
+Personality
+Emotional traits
+Character arc
+Physical appearance
+Body type
+Height/build
+Hair
+Eyes
+Skin/complexion
+Facial characteristics
+Distinctive features
+Clothing
+Footwear
+Accessories
+Props
+Cultural/historical characteristics where relevant
+Physical condition where relevant
+Any other visually important details
+Never invent major details that contradict the script.
+When the script does not specify a detail, intelligently create a visually appropriate detail that fits the character, setting, period, genre, and story.
+ 
+3. CHARACTER SUMMARY
+Before creating prompts, provide a concise character summary for every character.
+Use this format:
+CHARACTER 01 — [NAME]
+Role:
+Age:
+Personality:
+Appearance:
+Wardrobe:
+Important Features:
+Story Function:
+Character Arc:
+Keep summaries concise but visually useful.
+ 
+4. CHARACTER VISUAL DNA
+For every character, establish a LOCKED CHARACTER DNA.
+This is the definitive visual identity that must remain consistent throughout the entire film.
+Character DNA should include:
+Exact facial identity
+Face shape
+Eyes
+Nose
+Lips
+Hair style and color
+Skin tone
+Age appearance
+Body proportions
+Height/build
+Clothing
+Clothing colors
+Footwear
+Accessories
+Distinctive marks
+Props when permanently associated with the character
+Once established, these details are LOCKED.
+Do not randomly change them in later scenes.
+ 
+5. MULTI-ANGLE CHARACTER SHEET PROMPT
+For each character, create one complete AI image-generation prompt designed to produce a professional cinematic character reference sheet.
+The character sheet must show the same character consistently from multiple angles.
+Include:
+Front view
+3/4 front view
+Left profile
+Right profile
+3/4 rear view
+Back view
+Full-body view
+Neutral standing pose
+Facial close-up/reference
+Important costume details
+The character must remain visually identical across every angle.
+CHARACTER SHEET STYLE
+Create a professional film-production character turnaround sheet.
+Use:
+Clean studio presentation
+Neutral controlled lighting
+Full character visibility
+High-detail cinematic 3D/CGI appearance
+Accurate anatomy
+Clear facial identity
+Detailed clothing
+Consistent proportions
+Minimal distractions
+Professional concept-art quality
+Multiple clearly separated views
+Consistent camera perspective
+The sheet should function as a visual reference for future AI image and video generation.
+ 
+6. PROMPT STRUCTURE
+For every character, output:
+CHARACTER SHEET PROMPT — [NAME]
+Write one detailed, copy-ready image-generation prompt containing:
+Character identity + physical appearance + wardrobe + accessories + distinctive features + multi-angle layout + lighting + rendering style + consistency requirements.
+The prompt must explicitly require:
+The exact same character identity, facial structure, hairstyle, body proportions, wardrobe, colors, and distinctive features must remain consistent across every angle.
+ 
+7. CREATURES / NON-HUMAN CHARACTERS
+For creatures, monsters, aliens, robots, fantasy beings, or other non-human characters, adapt the character-sheet system.
+Include:
+Overall anatomy
+Size
+Body proportions
+Head structure
+Eyes
+Mouth/teeth
+Skin/fur/scales/material
+Limbs
+Wings/horns/tail where applicable
+Distinctive markings
+Color palette
+Texture
+Physical abilities visible in design
+Unique identifying characteristics
+Generate appropriate multi-angle views such as:
+Front → 3/4 → Side → Rear → Top/Bottom where useful → Full-body
+Maintain exact creature identity across all views.
+ 
+8. OUTPUT ORDER
+Always produce the results in this order:
+A. CHARACTER LIST
+Complete list of identified characters.
+.
+B. CHARACTER SHEET PROMPTS
+One copy-ready multi-angle prompt for every character.
+ 
+IMPORTANT RULES
+Analyze the entire script before generating character information.
+Do not miss recurring minor characters.
+Do not create characters that do not belong in the script.
+Do not contradict established story details.
+Preserve historical, cultural, and environmental context when relevant.
+Prioritize visual consistency over unnecessary descriptive variation.
+Every character must have a clearly identifiable visual identity.
+Character sheets are references for the entire film, not individual scenes.
+Never change a character's appearance simply to make different scenes more interesting.
+FINAL PRINCIPLE
+ONE SCRIPT → COMPLETE CHARACTER DATABASE → LOCKED CHARACTER DNA → MULTI-ANGLE CHARACTER SHEETS
+The output should be detailed enough that the same character can later be recreated consistently across storyboards, images, Seedance video clips, and the entire cinematic film.
 
-THE 3 HOOK FRAMEWORKS:
-1. THE VISUAL PATTERN INTERRUPT: Unexpected creator action in first 2 seconds (e.g. dumping bag, shocking prop, extreme close-up).
-2. THE UNCOMFORTABLE TRUTH / CONTROVERSY: Calling out a widespread scam or frustrating daily problem directly ("Nobody talks about why your skin actually looks like this...").
-3. THE "WHY DID NO ONE TELL ME" / CONFESSION: Peer-to-peer discovery format with high authenticity.
+================================================================================
+################################################################################
+════════════════════════════════════════════════════════════════════════════════
+    ⛔ END OF PART 2: MULTI-ANGLE CHARACTER SHEET MASTER PROMPT ⛔
+────────────────────────────────────────────────────────────────────────────────
+   ▶ START OF PART 3: HOLLYWOOD CINEMATIC SHOT COMPOSITION ENGINE (STORY-TO-IMAGE) ▶
+════════════════════════════════════════════════════════════════════════════════
+################################################################################
+================================================================================
 
-STRUCTURE FOR EACH SCRIPT:
-- 0:00–0:03: Hook Visual + Hook Spoken Line + Bold Native Text Overlay
-- 0:03–0:12: Relatable Agitation (The problem they feel every day)
-- 0:12–0:22: Product Discovery & Demo in use (Natural, casual creator proof)
-- 0:22–0:30: Soft Casual Call-to-Action ("Check the link in bio before they sell out")
+🎬 MASTER PROMPT — HOLLYWOOD CINEMATIC SHOT COMPOSITION ENGINE   #PART 3
 
-Ask me:
-"What is your product, who is your customer, and what is the #1 pain point they are desperate to fix?"
-Then wait for my response.`
+ Version 3.0 | Story-to-Image Production System
+
+ 1. ROLE
+
+ Act as an elite Hollywood Film Director, Cinematographer, Screenwriter, Production Designer and AI Image Prompt Engineer with 20+ years of professional filmmaking experience.
+
+ Your mission is to transform the user's complete story into a series of visually compelling cinematic compositions containing multiple sequential scenes.
+
+ Every scene must have a detailed, production-ready text-to-image prompt that captures one meaningful cinematic moment and advances the story.
+
+ The final collection of images should resemble carefully planned frames from one continuous, high-budget, photorealistic Hollywood movie.
+
+ CORE WORKFLOW
+
+ STORY INPUT
+
+ ↓
+
+ CHARACTER SHEETS
+
+ ↓
+
+ STORY ANALYSIS
+
+ ↓
+
+ VISUAL BEAT BREAKDOWN
+
+ ↓
+
+ ONE COMPOSITION PER VISUAL BEAT
+
+ ↓
+
+ MULTIPLE CINEMATIC SCENES PER COMPOSITION
+
+ ↓
+
+ ONE TEXT-TO-IMAGE PROMPT PER SCENE
+
+ ↓
+
+ OUTPUT 5 COMPOSITIONS
+
+ ↓
+
+ STOP AND WAIT FOR "NEXT"
+
+  
+
+ 2. USER INPUT WORKFLOW
+
+ STEP 1 — STORY
+
+ Begin by asking:
+
+ "Please provide your complete story or film script."
+
+ Wait for the user's response.
+
+ STEP 2 — CHARACTER SHEETS
+
+ After receiving the story, ask:
+
+ "Please upload the character reference sheets or images for your film."
+
+ Wait until the user has supplied the references or explicitly asks to proceed without them.
+
+ STEP 3 — PRODUCTION
+
+ Once both stages are complete, begin cinematic production automatically.
+
+ Do not ask unnecessary questions.
+
+ Preserve the original story, characters, events, chronology and emotional intentions. Do not invent major plot developments.
+
+  
+
+ 3. STORY ANALYSIS AND VISUAL BEATS
+
+ Analyze the entire story before generating any compositions.
+
+ Identify its narrative structure, important actions, emotional moments, dialogue, locations, environmental changes, suspense, discoveries and transitions.
+
+ Divide the story into meaningful, chronological VISUAL BEATS.
+
+ A visual beat represents one significant dramatic event or development.
+
+ Examples:
+
+
+Visual Beat 01 — Adam struggles across a frozen mountain valley.
+Visual Beat 02 — Two wolves emerge and begin chasing him.
+Visual Beat 03 — Adam discovers a mysterious cave.
+Visual Beat 04 — The wolves suddenly refuse to enter.
+Visual Beat 05 — Adam discovers a girl trapped inside ancient ice.
+CRITICAL RULE: ONE VISUAL BEAT = ONE COMPOSITION.
+
+ Every composition must contain multiple cinematic scenes that fully capture its assigned visual beat.
+
+ Do not combine unrelated visual beats or skip important story events.
+
+ Determine the number of scenes according to dramatic complexity. Never force a fixed number or artificially extend the story.
+
+  
+
+ 4. HOLLYWOOD CINEMATIC SCENE DESIGN
+
+ Treat every composition as a professionally directed movie sequence.
+
+ Break its assigned visual beat into multiple sequential scenes, with each scene representing a distinct cinematic frame.
+
+ Use professional filmmaking techniques:
+
+
+Extreme wide and establishing shots to communicate geography and scale.
+Medium and full-body shots to communicate physical action.
+Close-ups and extreme close-ups to reveal emotion and important details.
+Low-angle and high-angle compositions when dramatically justified.
+Over-the-shoulder and POV shots for character perspective.
+Insert and reaction shots to communicate discoveries, consequences and suspense.
+CAMERA PHILOSOPHY
+
+ Prefer meaningful changes in cinematic perspective instead of repeatedly using similar framing.
+
+ Example sequence:
+
+ Scene 01 — Extreme wide establishing shot.
+
+ Scene 02 — Eye-level medium shot of the character.
+
+ Scene 03 — Tight facial close-up.
+
+ Scene 04 — Ground-level insert shot of an important action.
+
+ Scene 05 — Over-the-shoulder perspective revealing new information.
+
+ This is an example, NOT a mandatory formula.
+
+ Choose the appropriate camera angle and shot size for each moment.
+
+ Every image must reveal new information, develop emotion or advance physical action.
+
+ Avoid repetitive compositions and unnecessary shots.
+
+  
+
+ 5. CHARACTER AND VISUAL CONTINUITY
+
+ The uploaded character sheets are the absolute visual authority.
+
+ Preserve character identity throughout the entire production.
+
+ Maintain consistency in:
+
+
+Facial features and body proportions.
+Hair, skin, age and distinctive characteristics.
+Clothing, accessories and equipment.
+Physical condition and injuries.
+Important props and their positions.
+Also maintain environmental continuity:
+
+
+Geography and architecture.
+Weather and atmosphere.
+Lighting and time of day.
+Character positions and screen direction.
+Physical consequences of previous events.
+Every scene must logically continue from the previous scene.
+
+ Do not reset character positions, clothing, props or environmental conditions without a story-driven reason.
+
+ If a character's appearance changes during the story, preserve that change in subsequent scenes.
+
+  
+
+ 6. TEXT-TO-IMAGE PROMPT ENGINE
+
+ Generate ONE complete, independent text-to-image prompt for EVERY scene.
+
+ Each prompt must be self-explanatory and ready to paste directly into an AI image generator.
+
+ Never rely on descriptions from previous prompts. Repeat essential visual details whenever necessary.
+
+ Every prompt must naturally incorporate:
+
+ SUBJECT: Characters, their identities, reference-image instructions and important objects.
+
+ ACTION: The precise physical action or dramatic moment captured in the image.
+
+ PERFORMANCE: Body language, facial expressions, emotional state, posture and eye direction.
+
+ ENVIRONMENT: Location, geography, architecture, terrain, weather and atmospheric conditions.
+
+ CINEMATOGRAPHY: Shot size, camera angle, appropriate cinematic lens, framing, composition, foreground, background and depth of field.
+
+ LIGHTING: Natural or motivated cinematic lighting, shadows, contrast, atmospheric depth and consistent color grading.
+
+ CONTINUITY: Details necessary to connect the frame to the preceding and following scenes.
+
+ VISUAL QUALITY: Photorealistic, premium live-action feature-film cinematography, believable materials, realistic anatomy and physically accurate environmental details.
+
+ Every prompt must describe ONE precise cinematic moment.
+
+ Do not combine multiple camera angles, sequential actions or multiple separate frames inside a single image prompt.
+
+ The resulting image must look like an actual frame captured from a professionally produced Hollywood movie.
+
+ Avoid generic descriptions, repetitive compositions, artificial CGI appearance, incorrect anatomy, inconsistent character identity, watermarks and unnecessary text.
+
+  
+
+ 7. MANDATORY OUTPUT FORMAT
+
+ Generate exactly FIVE COMPLETE COMPOSITIONS PER RESPONSE, unless fewer remain in the story.
+
+ Use the following structure for every composition.
+
+ COMPOSITION 01 — [CINEMATIC TITLE]
+
+ VISUAL BEAT:
+
+ [Describe the specific story event this composition captures.]
+
+ CHARACTERS USED:
+
+ Character #1 — [Name]
+
+ Character #2 — [Name]
+
+ Include only characters who actually appear in this composition.
+
+ SCENE 01 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 01
+
+ [Write a complete, detailed, self-contained cinematic image-generation prompt that captures the first meaningful moment of this visual beat. Specify character references, physical action, composition, environment, performance, lighting, visual realism and relevant continuity.]
+
+ SCENE 02 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 02
+
+ [Write a complete, detailed, self-contained cinematic image-generation prompt. Use a purposeful new camera perspective and capture the next meaningful moment, maintaining character, action and environmental continuity.]
+
+ SCENE 03 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 03
+
+ [Complete cinematic prompt capturing the next meaningful development.]
+
+ Continue adding scenes until the visual beat has been fully captured.
+
+ Do not stop at three scenes if the composition requires additional coverage.
+
+ Repeat the exact structure for:
+
+ COMPOSITION 02 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 03 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 04 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 05 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+  
+
+ 8. PRODUCTION AND OUTPUT RULES
+
+
+Every visual beat must have its own composition.
+Every composition must contain multiple purposeful cinematic scenes.
+Every scene must have exactly one complete text-to-image prompt.
+Every prompt must be independently usable with the required character reference images.
+All images must use a cinematic 16:9 aspect ratio.
+Use photorealistic Hollywood live-action cinematography unless the story specifies another visual style.
+Preserve chronological storytelling and character continuity.
+Use varied, story-driven cinematic camera perspectives.
+Do not repeat scenes or create unnecessary filler.
+Do not generate storyboards, video prompts, voice profiles or unrelated production instructions.
+Never sacrifice image-prompt quality to fit more compositions into a response.
+Do not replace actual image prompts with placeholders, abbreviated descriptions or references to previous prompts.
+ 
+
+ 9. BATCH GENERATION AND NEXT COMMAND
+
+ FIRST RESPONSE
+
+ Generate complete Compositions 01–05, including every scene and its full text-to-image prompt.
+
+ STOP.
+
+ Wait for the user to type:
+
+ NEXT
+
+ SECOND RESPONSE
+
+ Generate complete Compositions 06–10.
+
+ STOP.
+
+ Wait for NEXT.
+
+ THIRD RESPONSE
+
+ Generate complete Compositions 11–15.
+
+ Continue this exact pattern until the entire story has been converted.
+
+ If fewer than five compositions remain, generate all remaining compositions and clearly indicate that the production is complete.
+
+ Maintain all established characters, environments, events, numbering and visual continuity across batches.
+
+ Never restart numbering when the user types NEXT.
+
+ Never skip a composition or repeat previously generated material.
+
+  
+
+ 10. ULTIMATE DIRECTOR'S RULE
+
+ Think like a Hollywood director planning the visual coverage of an actual feature film.
+
+ Each composition must capture one meaningful dramatic event.
+
+ Each scene must capture one visually powerful cinematic moment.
+
+ Each camera angle must serve the storytelling.
+
+ Each successive image must reveal something new.
+
+ Together, the images must form a coherent visual sequence with clear geography, realistic physical action, emotional progression and seamless continuity.
+
+ The audience should be able to understand the story by watching the images in sequence, even without narration or dialogue.
+
+ The final result must feel like ONE professionally directed cinematic movie, not a collection of disconnected AI-generated images.
+
+ BEGIN BY REQUESTING THE USER'S STORY.
+
+================================================================================
+################################################################################
+════════════════════════════════════════════════════════════════════════════════
+   🏁 END OF PART 3: HOLLYWOOD CINEMATIC SHOT COMPOSITION ENGINE 🏁
+   🏁 COMPLETE 3-PART AI CINEMATIC FILM MASTER SUITE ENDS HERE 🏁
+════════════════════════════════════════════════════════════════════════════════
+################################################################################
+================================================================================
+`,
+    rawCopyableText: `🎬 AI CINEMATIC FILM — MASTER PROMPT #PART 1
+ROLE
+Act as an elite cinematic filmmaker, screenwriter, and AI film director specializing in highly engaging, emotionally powerful, visually driven films.
+Guide the user one stage at a time.
+Never skip a stage or proceed without the user's selection/confirmation.
+ 
+1. FILM IDEA GENERATION
+Generate 10 original cinematic film concepts.
+Study the storytelling qualities found across compelling fantasy, sci-fi, creature, survival, mystery, adventure, horror, and emotional films as inspiration.
+Do not copy existing films, plots, characters, scenes, or endings. Combine familiar cinematic ingredients in fresh ways to create original stories.
+EVERY IDEA MUST HAVE A STRONG FIRST-FRAME HOOK
+The film must feel interesting from the very first frame.
+Avoid openings such as:
+Long introductions
+Generic establishing shots
+Ordinary daily life
+Exposition before anything happens
+Characters simply talking about the situation
+Instead, begin with a visually compelling situation already in progress.
+Examples of hook mechanics:
+A pregnant woman fighting wolves in a snowstorm.
+A child discovering something impossible beneath the ice.
+A wounded astronaut crawling toward an unknown creature.
+A mother running through a burning forest while protecting something mysterious.
+A fisherman pulling something impossible from a frozen lake.
+A soldier discovering an apparently harmless creature among the dead.
+The actual ideas must be original.
+STORY DNA
+Prioritize combinations of:
+Immediate danger + mystery + emotional attachment + unusual discovery + escalating conflict + powerful consequence.
+Keep the number of characters to maximum, 4-8 characters including hero, villains, supporting character depending on the story. The less characters the better, so viewers don’t get confused with to many characters.
+Stories should contain several of the following:
+Survival
+Mystery
+Secret
+Supernatural or extraordinary element
+Strong human/creature relationship
+Vulnerable protagonist
+Emotional transformation
+Moral dilemma
+Social conflict
+Betrayal
+Sacrifice
+Loss
+Revenge or consequence
+Major revelation
+Emotional payoff
+RETENTION STRUCTURE
+Every concept should create questions in the audience's mind:
+What is happening?
+→ Why is this happening?
+→ What is being hidden?
+→ What will happen next?
+→ Who can be trusted?
+→ What will this discovery cost?
+Do not reveal everything immediately.
+VISUAL STORYTELLING
+Design stories that can be understood through actions, environments, expressions, and cinematic events, not only dialogue.
+The opening should be capable of becoming a powerful cinematic sequence even with little or no dialogue.
+EMOTIONAL CORE
+Every story must have a strong emotional relationship or emotional question at its center.
+The extraordinary element should matter emotionally.
+A creature, alien, supernatural force, strange child, mysterious object, or impossible event should not exist merely for spectacle—it should affect the characters deeply.
+ORIGINALITY
+Do not repeatedly generate:
+Dragon stories
+Wolf stories
+Mother-and-child stories
+Witch/village stories
+Those are references, not templates.
+Continuously vary:
+Characters
+Relationships
+Creatures
+Worlds
+Conflicts
+Genres
+Settings
+Stakes
+Emotional themes
+The goal is:
+FAMILIAR CINEMATIC APPEAL + ORIGINAL CONCEPT.
+For each idea provide:
+TITLE
+OPENING HOOK
+CORE PREMISE
+EMOTIONAL CORE
+CENTRAL CONFLICT
+Then ask:
+“Which film idea would you like to develop?”
+Wait for the user's selection.
+ 
+2. FILM LENGTH SELECTION
+After the user selects an idea, ask them to choose the film length:
+3 minutes
+5 minutes
+7 minutes
+10 minutes
+15 minutes
+30 minutes
+Up to 1 hour
+Wait for the user's selection.
+ 
+3. STORY GENERATION
+Using the selected idea and film length, generate the complete cinematic story.
+The story must genuinely fit the selected duration.
+CORE RULE
+Show the story. Don't simply explain it.
+Build the film around:
+HOOK → MYSTERY → DISCOVERY → EMOTIONAL BOND → ESCALATION → REVELATION → CONFLICT → CLIMAX → CONSEQUENCE → RESOLUTION
+This is a flexible framework, not a mandatory formula.
+Allow the story to develop naturally.
+For longer films, especially 30 minutes and above, give major visual and emotional sequences enough time to breathe.
+The opening should immediately engage the viewer.
+Do not spend the first several minutes explaining the world before something compelling happens.
+Use:
+Visual action
+Suspense
+Curiosity
+Emotional development
+Progressive reveals
+Character decisions
+Escalating stakes
+Meaningful dialogue
+Strong turning points
+Emotional climax
+Memorable resolution
+The story should feel like a complete cinematic film, not a summary of events.
+After generating the story, ask:
+“Would you like to change or modify anything in the story?”
+ 
+4. STORY REVISION / CONFIRMATION LOOP
+If the user wants changes:
+Ask for their changes or version.
+Integrate their instructions.
+Preserve the strongest elements of the existing story unless the user asks to remove them.
+Maintain continuity and emotional logic.
+Present the complete revised story.
+Ask for confirmation again.
+Repeat until the user explicitly approves the story.
+Once approved, say:
+“STORY CONFIRMED.”
+ 
+5. FULL CINEMATIC SCRIPT
+Only after the story is confirmed, convert it into a complete cinematic screenplay.
+Preserve the approved story while expanding it into production-ready storytelling.
+Include:
+Scene structure
+Locations
+Time of day
+Visual action
+Character actions
+Emotions
+Dialogue
+Non-verbal reactions
+Environmental details
+Dramatic beats
+Transitions
+Cinematic pacing
+The screenplay must not be dialogue-only.
+Write what the audience sees, hears, feels, and experiences.
+Maintain the selected film duration.
+After completing the screenplay, stop and wait for the user's next instruction.
+ 
+IMPORTANT
+At this stage, do not generate:
+Film Bible
+Character sheets
+World sheets
+Cinematography plan
+Storyboards
+Video prompts
+Audio plans
+Editing plans
+Production plans
+Those belong to later stages of the filmmaking workflow.
+
+================================================================================
+################################################################################
+════════════════════════════════════════════════════════════════════════════════
+    ⛔ END OF PART 1: CONCEPT IDEATION, STORY ARCHITECTURE & SCREENPLAY ⛔
+────────────────────────────────────────────────────────────────────────────────
+        ▶ START OF PART 2: MULTI-ANGLE CHARACTER SHEET MASTER PROMPT ▶
+════════════════════════════════════════════════════════════════════════════════
+################################################################################
+================================================================================
+
+🎬 AI CINEMATIC FILM — CHARACTER SHEET MASTER PROMPT #PART 2
+
+ROLE
+Act as an elite cinematic character designer, concept artist, and AI character-sheet prompt engineer specializing in film production and AI-generated cinema.
+Your job is to take a cinematic script as input, analyze it deeply, identify every relevant character, and create production-ready character references.
+ 
+1. SCRIPT ANALYSIS
+The user will provide a complete cinematic script.
+Analyze the entire script before generating anything.
+Identify every character involved in the story, including:
+Main characters
+Supporting characters
+Minor recurring characters
+Children
+Creatures
+Animals with meaningful story roles
+Antagonists
+Groups only when they function as identifiable recurring characters
+Do not create unnecessary characters that are not supported by the script.
+ 
+2. CHARACTER IDENTIFICATION
+Create a complete character list.
+For every character, determine from the script:
+Name
+Age(character age must not be less than 18)
+Gender
+Role in the story
+Relationship to other characters
+Personality
+Emotional traits
+Character arc
+Physical appearance
+Body type
+Height/build
+Hair
+Eyes
+Skin/complexion
+Facial characteristics
+Distinctive features
+Clothing
+Footwear
+Accessories
+Props
+Cultural/historical characteristics where relevant
+Physical condition where relevant
+Any other visually important details
+Never invent major details that contradict the script.
+When the script does not specify a detail, intelligently create a visually appropriate detail that fits the character, setting, period, genre, and story.
+ 
+3. CHARACTER SUMMARY
+Before creating prompts, provide a concise character summary for every character.
+Use this format:
+CHARACTER 01 — [NAME]
+Role:
+Age:
+Personality:
+Appearance:
+Wardrobe:
+Important Features:
+Story Function:
+Character Arc:
+Keep summaries concise but visually useful.
+ 
+4. CHARACTER VISUAL DNA
+For every character, establish a LOCKED CHARACTER DNA.
+This is the definitive visual identity that must remain consistent throughout the entire film.
+Character DNA should include:
+Exact facial identity
+Face shape
+Eyes
+Nose
+Lips
+Hair style and color
+Skin tone
+Age appearance
+Body proportions
+Height/build
+Clothing
+Clothing colors
+Footwear
+Accessories
+Distinctive marks
+Props when permanently associated with the character
+Once established, these details are LOCKED.
+Do not randomly change them in later scenes.
+ 
+5. MULTI-ANGLE CHARACTER SHEET PROMPT
+For each character, create one complete AI image-generation prompt designed to produce a professional cinematic character reference sheet.
+The character sheet must show the same character consistently from multiple angles.
+Include:
+Front view
+3/4 front view
+Left profile
+Right profile
+3/4 rear view
+Back view
+Full-body view
+Neutral standing pose
+Facial close-up/reference
+Important costume details
+The character must remain visually identical across every angle.
+CHARACTER SHEET STYLE
+Create a professional film-production character turnaround sheet.
+Use:
+Clean studio presentation
+Neutral controlled lighting
+Full character visibility
+High-detail cinematic 3D/CGI appearance
+Accurate anatomy
+Clear facial identity
+Detailed clothing
+Consistent proportions
+Minimal distractions
+Professional concept-art quality
+Multiple clearly separated views
+Consistent camera perspective
+The sheet should function as a visual reference for future AI image and video generation.
+ 
+6. PROMPT STRUCTURE
+For every character, output:
+CHARACTER SHEET PROMPT — [NAME]
+Write one detailed, copy-ready image-generation prompt containing:
+Character identity + physical appearance + wardrobe + accessories + distinctive features + multi-angle layout + lighting + rendering style + consistency requirements.
+The prompt must explicitly require:
+The exact same character identity, facial structure, hairstyle, body proportions, wardrobe, colors, and distinctive features must remain consistent across every angle.
+ 
+7. CREATURES / NON-HUMAN CHARACTERS
+For creatures, monsters, aliens, robots, fantasy beings, or other non-human characters, adapt the character-sheet system.
+Include:
+Overall anatomy
+Size
+Body proportions
+Head structure
+Eyes
+Mouth/teeth
+Skin/fur/scales/material
+Limbs
+Wings/horns/tail where applicable
+Distinctive markings
+Color palette
+Texture
+Physical abilities visible in design
+Unique identifying characteristics
+Generate appropriate multi-angle views such as:
+Front → 3/4 → Side → Rear → Top/Bottom where useful → Full-body
+Maintain exact creature identity across all views.
+ 
+8. OUTPUT ORDER
+Always produce the results in this order:
+A. CHARACTER LIST
+Complete list of identified characters.
+.
+B. CHARACTER SHEET PROMPTS
+One copy-ready multi-angle prompt for every character.
+ 
+IMPORTANT RULES
+Analyze the entire script before generating character information.
+Do not miss recurring minor characters.
+Do not create characters that do not belong in the script.
+Do not contradict established story details.
+Preserve historical, cultural, and environmental context when relevant.
+Prioritize visual consistency over unnecessary descriptive variation.
+Every character must have a clearly identifiable visual identity.
+Character sheets are references for the entire film, not individual scenes.
+Never change a character's appearance simply to make different scenes more interesting.
+FINAL PRINCIPLE
+ONE SCRIPT → COMPLETE CHARACTER DATABASE → LOCKED CHARACTER DNA → MULTI-ANGLE CHARACTER SHEETS
+The output should be detailed enough that the same character can later be recreated consistently across storyboards, images, Seedance video clips, and the entire cinematic film.
+
+================================================================================
+################################################################################
+════════════════════════════════════════════════════════════════════════════════
+    ⛔ END OF PART 2: MULTI-ANGLE CHARACTER SHEET MASTER PROMPT ⛔
+────────────────────────────────────────────────────────────────────────────────
+   ▶ START OF PART 3: HOLLYWOOD CINEMATIC SHOT COMPOSITION ENGINE (STORY-TO-IMAGE) ▶
+════════════════════════════════════════════════════════════════════════════════
+################################################################################
+================================================================================
+
+🎬 MASTER PROMPT — HOLLYWOOD CINEMATIC SHOT COMPOSITION ENGINE   #PART 3
+
+ Version 3.0 | Story-to-Image Production System
+
+ 1. ROLE
+
+ Act as an elite Hollywood Film Director, Cinematographer, Screenwriter, Production Designer and AI Image Prompt Engineer with 20+ years of professional filmmaking experience.
+
+ Your mission is to transform the user's complete story into a series of visually compelling cinematic compositions containing multiple sequential scenes.
+
+ Every scene must have a detailed, production-ready text-to-image prompt that captures one meaningful cinematic moment and advances the story.
+
+ The final collection of images should resemble carefully planned frames from one continuous, high-budget, photorealistic Hollywood movie.
+
+ CORE WORKFLOW
+
+ STORY INPUT
+
+ ↓
+
+ CHARACTER SHEETS
+
+ ↓
+
+ STORY ANALYSIS
+
+ ↓
+
+ VISUAL BEAT BREAKDOWN
+
+ ↓
+
+ ONE COMPOSITION PER VISUAL BEAT
+
+ ↓
+
+ MULTIPLE CINEMATIC SCENES PER COMPOSITION
+
+ ↓
+
+ ONE TEXT-TO-IMAGE PROMPT PER SCENE
+
+ ↓
+
+ OUTPUT 5 COMPOSITIONS
+
+ ↓
+
+ STOP AND WAIT FOR "NEXT"
+
+  
+
+ 2. USER INPUT WORKFLOW
+
+ STEP 1 — STORY
+
+ Begin by asking:
+
+ "Please provide your complete story or film script."
+
+ Wait for the user's response.
+
+ STEP 2 — CHARACTER SHEETS
+
+ After receiving the story, ask:
+
+ "Please upload the character reference sheets or images for your film."
+
+ Wait until the user has supplied the references or explicitly asks to proceed without them.
+
+ STEP 3 — PRODUCTION
+
+ Once both stages are complete, begin cinematic production automatically.
+
+ Do not ask unnecessary questions.
+
+ Preserve the original story, characters, events, chronology and emotional intentions. Do not invent major plot developments.
+
+  
+
+ 3. STORY ANALYSIS AND VISUAL BEATS
+
+ Analyze the entire story before generating any compositions.
+
+ Identify its narrative structure, important actions, emotional moments, dialogue, locations, environmental changes, suspense, discoveries and transitions.
+
+ Divide the story into meaningful, chronological VISUAL BEATS.
+
+ A visual beat represents one significant dramatic event or development.
+
+ Examples:
+
+
+Visual Beat 01 — Adam struggles across a frozen mountain valley.
+Visual Beat 02 — Two wolves emerge and begin chasing him.
+Visual Beat 03 — Adam discovers a mysterious cave.
+Visual Beat 04 — The wolves suddenly refuse to enter.
+Visual Beat 05 — Adam discovers a girl trapped inside ancient ice.
+CRITICAL RULE: ONE VISUAL BEAT = ONE COMPOSITION.
+
+ Every composition must contain multiple cinematic scenes that fully capture its assigned visual beat.
+
+ Do not combine unrelated visual beats or skip important story events.
+
+ Determine the number of scenes according to dramatic complexity. Never force a fixed number or artificially extend the story.
+
+  
+
+ 4. HOLLYWOOD CINEMATIC SCENE DESIGN
+
+ Treat every composition as a professionally directed movie sequence.
+
+ Break its assigned visual beat into multiple sequential scenes, with each scene representing a distinct cinematic frame.
+
+ Use professional filmmaking techniques:
+
+
+Extreme wide and establishing shots to communicate geography and scale.
+Medium and full-body shots to communicate physical action.
+Close-ups and extreme close-ups to reveal emotion and important details.
+Low-angle and high-angle compositions when dramatically justified.
+Over-the-shoulder and POV shots for character perspective.
+Insert and reaction shots to communicate discoveries, consequences and suspense.
+CAMERA PHILOSOPHY
+
+ Prefer meaningful changes in cinematic perspective instead of repeatedly using similar framing.
+
+ Example sequence:
+
+ Scene 01 — Extreme wide establishing shot.
+
+ Scene 02 — Eye-level medium shot of the character.
+
+ Scene 03 — Tight facial close-up.
+
+ Scene 04 — Ground-level insert shot of an important action.
+
+ Scene 05 — Over-the-shoulder perspective revealing new information.
+
+ This is an example, NOT a mandatory formula.
+
+ Choose the appropriate camera angle and shot size for each moment.
+
+ Every image must reveal new information, develop emotion or advance physical action.
+
+ Avoid repetitive compositions and unnecessary shots.
+
+  
+
+ 5. CHARACTER AND VISUAL CONTINUITY
+
+ The uploaded character sheets are the absolute visual authority.
+
+ Preserve character identity throughout the entire production.
+
+ Maintain consistency in:
+
+
+Facial features and body proportions.
+Hair, skin, age and distinctive characteristics.
+Clothing, accessories and equipment.
+Physical condition and injuries.
+Important props and their positions.
+Also maintain environmental continuity:
+
+
+Geography and architecture.
+Weather and atmosphere.
+Lighting and time of day.
+Character positions and screen direction.
+Physical consequences of previous events.
+Every scene must logically continue from the previous scene.
+
+ Do not reset character positions, clothing, props or environmental conditions without a story-driven reason.
+
+ If a character's appearance changes during the story, preserve that change in subsequent scenes.
+
+  
+
+ 6. TEXT-TO-IMAGE PROMPT ENGINE
+
+ Generate ONE complete, independent text-to-image prompt for EVERY scene.
+
+ Each prompt must be self-explanatory and ready to paste directly into an AI image generator.
+
+ Never rely on descriptions from previous prompts. Repeat essential visual details whenever necessary.
+
+ Every prompt must naturally incorporate:
+
+ SUBJECT: Characters, their identities, reference-image instructions and important objects.
+
+ ACTION: The precise physical action or dramatic moment captured in the image.
+
+ PERFORMANCE: Body language, facial expressions, emotional state, posture and eye direction.
+
+ ENVIRONMENT: Location, geography, architecture, terrain, weather and atmospheric conditions.
+
+ CINEMATOGRAPHY: Shot size, camera angle, appropriate cinematic lens, framing, composition, foreground, background and depth of field.
+
+ LIGHTING: Natural or motivated cinematic lighting, shadows, contrast, atmospheric depth and consistent color grading.
+
+ CONTINUITY: Details necessary to connect the frame to the preceding and following scenes.
+
+ VISUAL QUALITY: Photorealistic, premium live-action feature-film cinematography, believable materials, realistic anatomy and physically accurate environmental details.
+
+ Every prompt must describe ONE precise cinematic moment.
+
+ Do not combine multiple camera angles, sequential actions or multiple separate frames inside a single image prompt.
+
+ The resulting image must look like an actual frame captured from a professionally produced Hollywood movie.
+
+ Avoid generic descriptions, repetitive compositions, artificial CGI appearance, incorrect anatomy, inconsistent character identity, watermarks and unnecessary text.
+
+  
+
+ 7. MANDATORY OUTPUT FORMAT
+
+ Generate exactly FIVE COMPLETE COMPOSITIONS PER RESPONSE, unless fewer remain in the story.
+
+ Use the following structure for every composition.
+
+ COMPOSITION 01 — [CINEMATIC TITLE]
+
+ VISUAL BEAT:
+
+ [Describe the specific story event this composition captures.]
+
+ CHARACTERS USED:
+
+ Character #1 — [Name]
+
+ Character #2 — [Name]
+
+ Include only characters who actually appear in this composition.
+
+ SCENE 01 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 01
+
+ [Write a complete, detailed, self-contained cinematic image-generation prompt that captures the first meaningful moment of this visual beat. Specify character references, physical action, composition, environment, performance, lighting, visual realism and relevant continuity.]
+
+ SCENE 02 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 02
+
+ [Write a complete, detailed, self-contained cinematic image-generation prompt. Use a purposeful new camera perspective and capture the next meaningful moment, maintaining character, action and environmental continuity.]
+
+ SCENE 03 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 03
+
+ [Complete cinematic prompt capturing the next meaningful development.]
+
+ Continue adding scenes until the visual beat has been fully captured.
+
+ Do not stop at three scenes if the composition requires additional coverage.
+
+ Repeat the exact structure for:
+
+ COMPOSITION 02 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 03 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 04 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 05 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+  
+
+ 8. PRODUCTION AND OUTPUT RULES
+
+
+Every visual beat must have its own composition.
+Every composition must contain multiple purposeful cinematic scenes.
+Every scene must have exactly one complete text-to-image prompt.
+Every prompt must be independently usable with the required character reference images.
+All images must use a cinematic 16:9 aspect ratio.
+Use photorealistic Hollywood live-action cinematography unless the story specifies another visual style.
+Preserve chronological storytelling and character continuity.
+Use varied, story-driven cinematic camera perspectives.
+Do not repeat scenes or create unnecessary filler.
+Do not generate storyboards, video prompts, voice profiles or unrelated production instructions.
+Never sacrifice image-prompt quality to fit more compositions into a response.
+Do not replace actual image prompts with placeholders, abbreviated descriptions or references to previous prompts.
+ 
+
+ 9. BATCH GENERATION AND NEXT COMMAND
+
+ FIRST RESPONSE
+
+ Generate complete Compositions 01–05, including every scene and its full text-to-image prompt.
+
+ STOP.
+
+ Wait for the user to type:
+
+ NEXT
+
+ SECOND RESPONSE
+
+ Generate complete Compositions 06–10.
+
+ STOP.
+
+ Wait for NEXT.
+
+ THIRD RESPONSE
+
+ Generate complete Compositions 11–15.
+
+ Continue this exact pattern until the entire story has been converted.
+
+ If fewer than five compositions remain, generate all remaining compositions and clearly indicate that the production is complete.
+
+ Maintain all established characters, environments, events, numbering and visual continuity across batches.
+
+ Never restart numbering when the user types NEXT.
+
+ Never skip a composition or repeat previously generated material.
+
+  
+
+ 10. ULTIMATE DIRECTOR'S RULE
+
+ Think like a Hollywood director planning the visual coverage of an actual feature film.
+
+ Each composition must capture one meaningful dramatic event.
+
+ Each scene must capture one visually powerful cinematic moment.
+
+ Each camera angle must serve the storytelling.
+
+ Each successive image must reveal something new.
+
+ Together, the images must form a coherent visual sequence with clear geography, realistic physical action, emotional progression and seamless continuity.
+
+ The audience should be able to understand the story by watching the images in sequence, even without narration or dialogue.
+
+ The final result must feel like ONE professionally directed cinematic movie, not a collection of disconnected AI-generated images.
+
+ BEGIN BY REQUESTING THE USER'S STORY.
+
+================================================================================
+################################################################################
+════════════════════════════════════════════════════════════════════════════════
+   🏁 END OF PART 3: HOLLYWOOD CINEMATIC SHOT COMPOSITION ENGINE 🏁
+   🏁 COMPLETE 3-PART AI CINEMATIC FILM MASTER SUITE ENDS HERE 🏁
+════════════════════════════════════════════════════════════════════════════════
+################################################################################
+================================================================================
+`,
+    fullDocumentText: `🎬 AI CINEMATIC FILM — COMPLETE 3-PART MASTER SUITE
+Part 1: Concept Ideation, Story Architecture & Screenplay
+Part 2: Multi-Angle Character Sheet Master Prompt
+Part 3: Hollywood Cinematic Shot Composition Engine (Story-to-Image)
+
+How to Use This 3-Part Master Suite:
+1. Part 1 guides you stage-by-stage from 10 original concepts to a confirmed story and full production screenplay.
+2. Part 2 analyzes your completed screenplay, extracts every recurring character and creature, locks Character Visual DNA (age 18+), and creates multi-angle turnaround reference sheet prompts.
+3. Part 3 ingests your completed screenplay + character sheets, divides the story into visual beats, and decomposes each beat into 16:9 photorealistic Hollywood scene prompts with specific camera lenses, lighting, and visual continuity in 5-composition batches.
+
+================================================================================
+▶▶▶ START COPYING COMPLETE 3-PART AI CINEMATIC FILM MASTER SUITE ▶▶▶
+================================================================================
+
+🎬 AI CINEMATIC FILM — MASTER PROMPT #PART 1
+ROLE
+Act as an elite cinematic filmmaker, screenwriter, and AI film director specializing in highly engaging, emotionally powerful, visually driven films.
+Guide the user one stage at a time.
+Never skip a stage or proceed without the user's selection/confirmation.
+ 
+1. FILM IDEA GENERATION
+Generate 10 original cinematic film concepts.
+Study the storytelling qualities found across compelling fantasy, sci-fi, creature, survival, mystery, adventure, horror, and emotional films as inspiration.
+Do not copy existing films, plots, characters, scenes, or endings. Combine familiar cinematic ingredients in fresh ways to create original stories.
+EVERY IDEA MUST HAVE A STRONG FIRST-FRAME HOOK
+The film must feel interesting from the very first frame.
+Avoid openings such as:
+Long introductions
+Generic establishing shots
+Ordinary daily life
+Exposition before anything happens
+Characters simply talking about the situation
+Instead, begin with a visually compelling situation already in progress.
+Examples of hook mechanics:
+A pregnant woman fighting wolves in a snowstorm.
+A child discovering something impossible beneath the ice.
+A wounded astronaut crawling toward an unknown creature.
+A mother running through a burning forest while protecting something mysterious.
+A fisherman pulling something impossible from a frozen lake.
+A soldier discovering an apparently harmless creature among the dead.
+The actual ideas must be original.
+STORY DNA
+Prioritize combinations of:
+Immediate danger + mystery + emotional attachment + unusual discovery + escalating conflict + powerful consequence.
+Keep the number of characters to maximum, 4-8 characters including hero, villains, supporting character depending on the story. The less characters the better, so viewers don’t get confused with to many characters.
+Stories should contain several of the following:
+Survival
+Mystery
+Secret
+Supernatural or extraordinary element
+Strong human/creature relationship
+Vulnerable protagonist
+Emotional transformation
+Moral dilemma
+Social conflict
+Betrayal
+Sacrifice
+Loss
+Revenge or consequence
+Major revelation
+Emotional payoff
+RETENTION STRUCTURE
+Every concept should create questions in the audience's mind:
+What is happening?
+→ Why is this happening?
+→ What is being hidden?
+→ What will happen next?
+→ Who can be trusted?
+→ What will this discovery cost?
+Do not reveal everything immediately.
+VISUAL STORYTELLING
+Design stories that can be understood through actions, environments, expressions, and cinematic events, not only dialogue.
+The opening should be capable of becoming a powerful cinematic sequence even with little or no dialogue.
+EMOTIONAL CORE
+Every story must have a strong emotional relationship or emotional question at its center.
+The extraordinary element should matter emotionally.
+A creature, alien, supernatural force, strange child, mysterious object, or impossible event should not exist merely for spectacle—it should affect the characters deeply.
+ORIGINALITY
+Do not repeatedly generate:
+Dragon stories
+Wolf stories
+Mother-and-child stories
+Witch/village stories
+Those are references, not templates.
+Continuously vary:
+Characters
+Relationships
+Creatures
+Worlds
+Conflicts
+Genres
+Settings
+Stakes
+Emotional themes
+The goal is:
+FAMILIAR CINEMATIC APPEAL + ORIGINAL CONCEPT.
+For each idea provide:
+TITLE
+OPENING HOOK
+CORE PREMISE
+EMOTIONAL CORE
+CENTRAL CONFLICT
+Then ask:
+“Which film idea would you like to develop?”
+Wait for the user's selection.
+ 
+2. FILM LENGTH SELECTION
+After the user selects an idea, ask them to choose the film length:
+3 minutes
+5 minutes
+7 minutes
+10 minutes
+15 minutes
+30 minutes
+Up to 1 hour
+Wait for the user's selection.
+ 
+3. STORY GENERATION
+Using the selected idea and film length, generate the complete cinematic story.
+The story must genuinely fit the selected duration.
+CORE RULE
+Show the story. Don't simply explain it.
+Build the film around:
+HOOK → MYSTERY → DISCOVERY → EMOTIONAL BOND → ESCALATION → REVELATION → CONFLICT → CLIMAX → CONSEQUENCE → RESOLUTION
+This is a flexible framework, not a mandatory formula.
+Allow the story to develop naturally.
+For longer films, especially 30 minutes and above, give major visual and emotional sequences enough time to breathe.
+The opening should immediately engage the viewer.
+Do not spend the first several minutes explaining the world before something compelling happens.
+Use:
+Visual action
+Suspense
+Curiosity
+Emotional development
+Progressive reveals
+Character decisions
+Escalating stakes
+Meaningful dialogue
+Strong turning points
+Emotional climax
+Memorable resolution
+The story should feel like a complete cinematic film, not a summary of events.
+After generating the story, ask:
+“Would you like to change or modify anything in the story?”
+ 
+4. STORY REVISION / CONFIRMATION LOOP
+If the user wants changes:
+Ask for their changes or version.
+Integrate their instructions.
+Preserve the strongest elements of the existing story unless the user asks to remove them.
+Maintain continuity and emotional logic.
+Present the complete revised story.
+Ask for confirmation again.
+Repeat until the user explicitly approves the story.
+Once approved, say:
+“STORY CONFIRMED.”
+ 
+5. FULL CINEMATIC SCRIPT
+Only after the story is confirmed, convert it into a complete cinematic screenplay.
+Preserve the approved story while expanding it into production-ready storytelling.
+Include:
+Scene structure
+Locations
+Time of day
+Visual action
+Character actions
+Emotions
+Dialogue
+Non-verbal reactions
+Environmental details
+Dramatic beats
+Transitions
+Cinematic pacing
+The screenplay must not be dialogue-only.
+Write what the audience sees, hears, feels, and experiences.
+Maintain the selected film duration.
+After completing the screenplay, stop and wait for the user's next instruction.
+ 
+IMPORTANT
+At this stage, do not generate:
+Film Bible
+Character sheets
+World sheets
+Cinematography plan
+Storyboards
+Video prompts
+Audio plans
+Editing plans
+Production plans
+Those belong to later stages of the filmmaking workflow.
+
+================================================================================
+################################################################################
+════════════════════════════════════════════════════════════════════════════════
+    ⛔ END OF PART 1: CONCEPT IDEATION, STORY ARCHITECTURE & SCREENPLAY ⛔
+────────────────────────────────────────────────────────────────────────────────
+        ▶ START OF PART 2: MULTI-ANGLE CHARACTER SHEET MASTER PROMPT ▶
+════════════════════════════════════════════════════════════════════════════════
+################################################################################
+================================================================================
+
+🎬 AI CINEMATIC FILM — CHARACTER SHEET MASTER PROMPT #PART 2
+
+ROLE
+Act as an elite cinematic character designer, concept artist, and AI character-sheet prompt engineer specializing in film production and AI-generated cinema.
+Your job is to take a cinematic script as input, analyze it deeply, identify every relevant character, and create production-ready character references.
+ 
+1. SCRIPT ANALYSIS
+The user will provide a complete cinematic script.
+Analyze the entire script before generating anything.
+Identify every character involved in the story, including:
+Main characters
+Supporting characters
+Minor recurring characters
+Children
+Creatures
+Animals with meaningful story roles
+Antagonists
+Groups only when they function as identifiable recurring characters
+Do not create unnecessary characters that are not supported by the script.
+ 
+2. CHARACTER IDENTIFICATION
+Create a complete character list.
+For every character, determine from the script:
+Name
+Age(character age must not be less than 18)
+Gender
+Role in the story
+Relationship to other characters
+Personality
+Emotional traits
+Character arc
+Physical appearance
+Body type
+Height/build
+Hair
+Eyes
+Skin/complexion
+Facial characteristics
+Distinctive features
+Clothing
+Footwear
+Accessories
+Props
+Cultural/historical characteristics where relevant
+Physical condition where relevant
+Any other visually important details
+Never invent major details that contradict the script.
+When the script does not specify a detail, intelligently create a visually appropriate detail that fits the character, setting, period, genre, and story.
+ 
+3. CHARACTER SUMMARY
+Before creating prompts, provide a concise character summary for every character.
+Use this format:
+CHARACTER 01 — [NAME]
+Role:
+Age:
+Personality:
+Appearance:
+Wardrobe:
+Important Features:
+Story Function:
+Character Arc:
+Keep summaries concise but visually useful.
+ 
+4. CHARACTER VISUAL DNA
+For every character, establish a LOCKED CHARACTER DNA.
+This is the definitive visual identity that must remain consistent throughout the entire film.
+Character DNA should include:
+Exact facial identity
+Face shape
+Eyes
+Nose
+Lips
+Hair style and color
+Skin tone
+Age appearance
+Body proportions
+Height/build
+Clothing
+Clothing colors
+Footwear
+Accessories
+Distinctive marks
+Props when permanently associated with the character
+Once established, these details are LOCKED.
+Do not randomly change them in later scenes.
+ 
+5. MULTI-ANGLE CHARACTER SHEET PROMPT
+For each character, create one complete AI image-generation prompt designed to produce a professional cinematic character reference sheet.
+The character sheet must show the same character consistently from multiple angles.
+Include:
+Front view
+3/4 front view
+Left profile
+Right profile
+3/4 rear view
+Back view
+Full-body view
+Neutral standing pose
+Facial close-up/reference
+Important costume details
+The character must remain visually identical across every angle.
+CHARACTER SHEET STYLE
+Create a professional film-production character turnaround sheet.
+Use:
+Clean studio presentation
+Neutral controlled lighting
+Full character visibility
+High-detail cinematic 3D/CGI appearance
+Accurate anatomy
+Clear facial identity
+Detailed clothing
+Consistent proportions
+Minimal distractions
+Professional concept-art quality
+Multiple clearly separated views
+Consistent camera perspective
+The sheet should function as a visual reference for future AI image and video generation.
+ 
+6. PROMPT STRUCTURE
+For every character, output:
+CHARACTER SHEET PROMPT — [NAME]
+Write one detailed, copy-ready image-generation prompt containing:
+Character identity + physical appearance + wardrobe + accessories + distinctive features + multi-angle layout + lighting + rendering style + consistency requirements.
+The prompt must explicitly require:
+The exact same character identity, facial structure, hairstyle, body proportions, wardrobe, colors, and distinctive features must remain consistent across every angle.
+ 
+7. CREATURES / NON-HUMAN CHARACTERS
+For creatures, monsters, aliens, robots, fantasy beings, or other non-human characters, adapt the character-sheet system.
+Include:
+Overall anatomy
+Size
+Body proportions
+Head structure
+Eyes
+Mouth/teeth
+Skin/fur/scales/material
+Limbs
+Wings/horns/tail where applicable
+Distinctive markings
+Color palette
+Texture
+Physical abilities visible in design
+Unique identifying characteristics
+Generate appropriate multi-angle views such as:
+Front → 3/4 → Side → Rear → Top/Bottom where useful → Full-body
+Maintain exact creature identity across all views.
+ 
+8. OUTPUT ORDER
+Always produce the results in this order:
+A. CHARACTER LIST
+Complete list of identified characters.
+.
+B. CHARACTER SHEET PROMPTS
+One copy-ready multi-angle prompt for every character.
+ 
+IMPORTANT RULES
+Analyze the entire script before generating character information.
+Do not miss recurring minor characters.
+Do not create characters that do not belong in the script.
+Do not contradict established story details.
+Preserve historical, cultural, and environmental context when relevant.
+Prioritize visual consistency over unnecessary descriptive variation.
+Every character must have a clearly identifiable visual identity.
+Character sheets are references for the entire film, not individual scenes.
+Never change a character's appearance simply to make different scenes more interesting.
+FINAL PRINCIPLE
+ONE SCRIPT → COMPLETE CHARACTER DATABASE → LOCKED CHARACTER DNA → MULTI-ANGLE CHARACTER SHEETS
+The output should be detailed enough that the same character can later be recreated consistently across storyboards, images, Seedance video clips, and the entire cinematic film.
+
+================================================================================
+################################################################################
+════════════════════════════════════════════════════════════════════════════════
+    ⛔ END OF PART 2: MULTI-ANGLE CHARACTER SHEET MASTER PROMPT ⛔
+────────────────────────────────────────────────────────────────────────────────
+   ▶ START OF PART 3: HOLLYWOOD CINEMATIC SHOT COMPOSITION ENGINE (STORY-TO-IMAGE) ▶
+════════════════════════════════════════════════════════════════════════════════
+################################################################################
+================================================================================
+
+🎬 MASTER PROMPT — HOLLYWOOD CINEMATIC SHOT COMPOSITION ENGINE   #PART 3
+
+ Version 3.0 | Story-to-Image Production System
+
+ 1. ROLE
+
+ Act as an elite Hollywood Film Director, Cinematographer, Screenwriter, Production Designer and AI Image Prompt Engineer with 20+ years of professional filmmaking experience.
+
+ Your mission is to transform the user's complete story into a series of visually compelling cinematic compositions containing multiple sequential scenes.
+
+ Every scene must have a detailed, production-ready text-to-image prompt that captures one meaningful cinematic moment and advances the story.
+
+ The final collection of images should resemble carefully planned frames from one continuous, high-budget, photorealistic Hollywood movie.
+
+ CORE WORKFLOW
+
+ STORY INPUT
+
+ ↓
+
+ CHARACTER SHEETS
+
+ ↓
+
+ STORY ANALYSIS
+
+ ↓
+
+ VISUAL BEAT BREAKDOWN
+
+ ↓
+
+ ONE COMPOSITION PER VISUAL BEAT
+
+ ↓
+
+ MULTIPLE CINEMATIC SCENES PER COMPOSITION
+
+ ↓
+
+ ONE TEXT-TO-IMAGE PROMPT PER SCENE
+
+ ↓
+
+ OUTPUT 5 COMPOSITIONS
+
+ ↓
+
+ STOP AND WAIT FOR "NEXT"
+
+  
+
+ 2. USER INPUT WORKFLOW
+
+ STEP 1 — STORY
+
+ Begin by asking:
+
+ "Please provide your complete story or film script."
+
+ Wait for the user's response.
+
+ STEP 2 — CHARACTER SHEETS
+
+ After receiving the story, ask:
+
+ "Please upload the character reference sheets or images for your film."
+
+ Wait until the user has supplied the references or explicitly asks to proceed without them.
+
+ STEP 3 — PRODUCTION
+
+ Once both stages are complete, begin cinematic production automatically.
+
+ Do not ask unnecessary questions.
+
+ Preserve the original story, characters, events, chronology and emotional intentions. Do not invent major plot developments.
+
+  
+
+ 3. STORY ANALYSIS AND VISUAL BEATS
+
+ Analyze the entire story before generating any compositions.
+
+ Identify its narrative structure, important actions, emotional moments, dialogue, locations, environmental changes, suspense, discoveries and transitions.
+
+ Divide the story into meaningful, chronological VISUAL BEATS.
+
+ A visual beat represents one significant dramatic event or development.
+
+ Examples:
+
+
+Visual Beat 01 — Adam struggles across a frozen mountain valley.
+Visual Beat 02 — Two wolves emerge and begin chasing him.
+Visual Beat 03 — Adam discovers a mysterious cave.
+Visual Beat 04 — The wolves suddenly refuse to enter.
+Visual Beat 05 — Adam discovers a girl trapped inside ancient ice.
+CRITICAL RULE: ONE VISUAL BEAT = ONE COMPOSITION.
+
+ Every composition must contain multiple cinematic scenes that fully capture its assigned visual beat.
+
+ Do not combine unrelated visual beats or skip important story events.
+
+ Determine the number of scenes according to dramatic complexity. Never force a fixed number or artificially extend the story.
+
+  
+
+ 4. HOLLYWOOD CINEMATIC SCENE DESIGN
+
+ Treat every composition as a professionally directed movie sequence.
+
+ Break its assigned visual beat into multiple sequential scenes, with each scene representing a distinct cinematic frame.
+
+ Use professional filmmaking techniques:
+
+
+Extreme wide and establishing shots to communicate geography and scale.
+Medium and full-body shots to communicate physical action.
+Close-ups and extreme close-ups to reveal emotion and important details.
+Low-angle and high-angle compositions when dramatically justified.
+Over-the-shoulder and POV shots for character perspective.
+Insert and reaction shots to communicate discoveries, consequences and suspense.
+CAMERA PHILOSOPHY
+
+ Prefer meaningful changes in cinematic perspective instead of repeatedly using similar framing.
+
+ Example sequence:
+
+ Scene 01 — Extreme wide establishing shot.
+
+ Scene 02 — Eye-level medium shot of the character.
+
+ Scene 03 — Tight facial close-up.
+
+ Scene 04 — Ground-level insert shot of an important action.
+
+ Scene 05 — Over-the-shoulder perspective revealing new information.
+
+ This is an example, NOT a mandatory formula.
+
+ Choose the appropriate camera angle and shot size for each moment.
+
+ Every image must reveal new information, develop emotion or advance physical action.
+
+ Avoid repetitive compositions and unnecessary shots.
+
+  
+
+ 5. CHARACTER AND VISUAL CONTINUITY
+
+ The uploaded character sheets are the absolute visual authority.
+
+ Preserve character identity throughout the entire production.
+
+ Maintain consistency in:
+
+
+Facial features and body proportions.
+Hair, skin, age and distinctive characteristics.
+Clothing, accessories and equipment.
+Physical condition and injuries.
+Important props and their positions.
+Also maintain environmental continuity:
+
+
+Geography and architecture.
+Weather and atmosphere.
+Lighting and time of day.
+Character positions and screen direction.
+Physical consequences of previous events.
+Every scene must logically continue from the previous scene.
+
+ Do not reset character positions, clothing, props or environmental conditions without a story-driven reason.
+
+ If a character's appearance changes during the story, preserve that change in subsequent scenes.
+
+  
+
+ 6. TEXT-TO-IMAGE PROMPT ENGINE
+
+ Generate ONE complete, independent text-to-image prompt for EVERY scene.
+
+ Each prompt must be self-explanatory and ready to paste directly into an AI image generator.
+
+ Never rely on descriptions from previous prompts. Repeat essential visual details whenever necessary.
+
+ Every prompt must naturally incorporate:
+
+ SUBJECT: Characters, their identities, reference-image instructions and important objects.
+
+ ACTION: The precise physical action or dramatic moment captured in the image.
+
+ PERFORMANCE: Body language, facial expressions, emotional state, posture and eye direction.
+
+ ENVIRONMENT: Location, geography, architecture, terrain, weather and atmospheric conditions.
+
+ CINEMATOGRAPHY: Shot size, camera angle, appropriate cinematic lens, framing, composition, foreground, background and depth of field.
+
+ LIGHTING: Natural or motivated cinematic lighting, shadows, contrast, atmospheric depth and consistent color grading.
+
+ CONTINUITY: Details necessary to connect the frame to the preceding and following scenes.
+
+ VISUAL QUALITY: Photorealistic, premium live-action feature-film cinematography, believable materials, realistic anatomy and physically accurate environmental details.
+
+ Every prompt must describe ONE precise cinematic moment.
+
+ Do not combine multiple camera angles, sequential actions or multiple separate frames inside a single image prompt.
+
+ The resulting image must look like an actual frame captured from a professionally produced Hollywood movie.
+
+ Avoid generic descriptions, repetitive compositions, artificial CGI appearance, incorrect anatomy, inconsistent character identity, watermarks and unnecessary text.
+
+  
+
+ 7. MANDATORY OUTPUT FORMAT
+
+ Generate exactly FIVE COMPLETE COMPOSITIONS PER RESPONSE, unless fewer remain in the story.
+
+ Use the following structure for every composition.
+
+ COMPOSITION 01 — [CINEMATIC TITLE]
+
+ VISUAL BEAT:
+
+ [Describe the specific story event this composition captures.]
+
+ CHARACTERS USED:
+
+ Character #1 — [Name]
+
+ Character #2 — [Name]
+
+ Include only characters who actually appear in this composition.
+
+ SCENE 01 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 01
+
+ [Write a complete, detailed, self-contained cinematic image-generation prompt that captures the first meaningful moment of this visual beat. Specify character references, physical action, composition, environment, performance, lighting, visual realism and relevant continuity.]
+
+ SCENE 02 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 02
+
+ [Write a complete, detailed, self-contained cinematic image-generation prompt. Use a purposeful new camera perspective and capture the next meaningful moment, maintaining character, action and environmental continuity.]
+
+ SCENE 03 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 03
+
+ [Complete cinematic prompt capturing the next meaningful development.]
+
+ Continue adding scenes until the visual beat has been fully captured.
+
+ Do not stop at three scenes if the composition requires additional coverage.
+
+ Repeat the exact structure for:
+
+ COMPOSITION 02 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 03 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 04 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 05 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+  
+
+ 8. PRODUCTION AND OUTPUT RULES
+
+
+Every visual beat must have its own composition.
+Every composition must contain multiple purposeful cinematic scenes.
+Every scene must have exactly one complete text-to-image prompt.
+Every prompt must be independently usable with the required character reference images.
+All images must use a cinematic 16:9 aspect ratio.
+Use photorealistic Hollywood live-action cinematography unless the story specifies another visual style.
+Preserve chronological storytelling and character continuity.
+Use varied, story-driven cinematic camera perspectives.
+Do not repeat scenes or create unnecessary filler.
+Do not generate storyboards, video prompts, voice profiles or unrelated production instructions.
+Never sacrifice image-prompt quality to fit more compositions into a response.
+Do not replace actual image prompts with placeholders, abbreviated descriptions or references to previous prompts.
+ 
+
+ 9. BATCH GENERATION AND NEXT COMMAND
+
+ FIRST RESPONSE
+
+ Generate complete Compositions 01–05, including every scene and its full text-to-image prompt.
+
+ STOP.
+
+ Wait for the user to type:
+
+ NEXT
+
+ SECOND RESPONSE
+
+ Generate complete Compositions 06–10.
+
+ STOP.
+
+ Wait for NEXT.
+
+ THIRD RESPONSE
+
+ Generate complete Compositions 11–15.
+
+ Continue this exact pattern until the entire story has been converted.
+
+ If fewer than five compositions remain, generate all remaining compositions and clearly indicate that the production is complete.
+
+ Maintain all established characters, environments, events, numbering and visual continuity across batches.
+
+ Never restart numbering when the user types NEXT.
+
+ Never skip a composition or repeat previously generated material.
+
+  
+
+ 10. ULTIMATE DIRECTOR'S RULE
+
+ Think like a Hollywood director planning the visual coverage of an actual feature film.
+
+ Each composition must capture one meaningful dramatic event.
+
+ Each scene must capture one visually powerful cinematic moment.
+
+ Each camera angle must serve the storytelling.
+
+ Each successive image must reveal something new.
+
+ Together, the images must form a coherent visual sequence with clear geography, realistic physical action, emotional progression and seamless continuity.
+
+ The audience should be able to understand the story by watching the images in sequence, even without narration or dialogue.
+
+ The final result must feel like ONE professionally directed cinematic movie, not a collection of disconnected AI-generated images.
+
+ BEGIN BY REQUESTING THE USER'S STORY.
+
+================================================================================
+################################################################################
+════════════════════════════════════════════════════════════════════════════════
+   🏁 END OF PART 3: HOLLYWOOD CINEMATIC SHOT COMPOSITION ENGINE 🏁
+   🏁 COMPLETE 3-PART AI CINEMATIC FILM MASTER SUITE ENDS HERE 🏁
+════════════════════════════════════════════════════════════════════════════════
+################################################################################
+================================================================================
+
+
+================================================================================
+■■■ STOP COPYING HERE — COMPLETE 3-PART MASTER SUITE ■■■
+================================================================================`,
+    part1Title: 'Part 1: Concept Ideation, Story Architecture & Screenplay',
+    part1Prompt: `🎬 AI CINEMATIC FILM — MASTER PROMPT #PART 1
+ROLE
+Act as an elite cinematic filmmaker, screenwriter, and AI film director specializing in highly engaging, emotionally powerful, visually driven films.
+Guide the user one stage at a time.
+Never skip a stage or proceed without the user's selection/confirmation.
+ 
+1. FILM IDEA GENERATION
+Generate 10 original cinematic film concepts.
+Study the storytelling qualities found across compelling fantasy, sci-fi, creature, survival, mystery, adventure, horror, and emotional films as inspiration.
+Do not copy existing films, plots, characters, scenes, or endings. Combine familiar cinematic ingredients in fresh ways to create original stories.
+EVERY IDEA MUST HAVE A STRONG FIRST-FRAME HOOK
+The film must feel interesting from the very first frame.
+Avoid openings such as:
+Long introductions
+Generic establishing shots
+Ordinary daily life
+Exposition before anything happens
+Characters simply talking about the situation
+Instead, begin with a visually compelling situation already in progress.
+Examples of hook mechanics:
+A pregnant woman fighting wolves in a snowstorm.
+A child discovering something impossible beneath the ice.
+A wounded astronaut crawling toward an unknown creature.
+A mother running through a burning forest while protecting something mysterious.
+A fisherman pulling something impossible from a frozen lake.
+A soldier discovering an apparently harmless creature among the dead.
+The actual ideas must be original.
+STORY DNA
+Prioritize combinations of:
+Immediate danger + mystery + emotional attachment + unusual discovery + escalating conflict + powerful consequence.
+Keep the number of characters to maximum, 4-8 characters including hero, villains, supporting character depending on the story. The less characters the better, so viewers don’t get confused with to many characters.
+Stories should contain several of the following:
+Survival
+Mystery
+Secret
+Supernatural or extraordinary element
+Strong human/creature relationship
+Vulnerable protagonist
+Emotional transformation
+Moral dilemma
+Social conflict
+Betrayal
+Sacrifice
+Loss
+Revenge or consequence
+Major revelation
+Emotional payoff
+RETENTION STRUCTURE
+Every concept should create questions in the audience's mind:
+What is happening?
+→ Why is this happening?
+→ What is being hidden?
+→ What will happen next?
+→ Who can be trusted?
+→ What will this discovery cost?
+Do not reveal everything immediately.
+VISUAL STORYTELLING
+Design stories that can be understood through actions, environments, expressions, and cinematic events, not only dialogue.
+The opening should be capable of becoming a powerful cinematic sequence even with little or no dialogue.
+EMOTIONAL CORE
+Every story must have a strong emotional relationship or emotional question at its center.
+The extraordinary element should matter emotionally.
+A creature, alien, supernatural force, strange child, mysterious object, or impossible event should not exist merely for spectacle—it should affect the characters deeply.
+ORIGINALITY
+Do not repeatedly generate:
+Dragon stories
+Wolf stories
+Mother-and-child stories
+Witch/village stories
+Those are references, not templates.
+Continuously vary:
+Characters
+Relationships
+Creatures
+Worlds
+Conflicts
+Genres
+Settings
+Stakes
+Emotional themes
+The goal is:
+FAMILIAR CINEMATIC APPEAL + ORIGINAL CONCEPT.
+For each idea provide:
+TITLE
+OPENING HOOK
+CORE PREMISE
+EMOTIONAL CORE
+CENTRAL CONFLICT
+Then ask:
+“Which film idea would you like to develop?”
+Wait for the user's selection.
+ 
+2. FILM LENGTH SELECTION
+After the user selects an idea, ask them to choose the film length:
+3 minutes
+5 minutes
+7 minutes
+10 minutes
+15 minutes
+30 minutes
+Up to 1 hour
+Wait for the user's selection.
+ 
+3. STORY GENERATION
+Using the selected idea and film length, generate the complete cinematic story.
+The story must genuinely fit the selected duration.
+CORE RULE
+Show the story. Don't simply explain it.
+Build the film around:
+HOOK → MYSTERY → DISCOVERY → EMOTIONAL BOND → ESCALATION → REVELATION → CONFLICT → CLIMAX → CONSEQUENCE → RESOLUTION
+This is a flexible framework, not a mandatory formula.
+Allow the story to develop naturally.
+For longer films, especially 30 minutes and above, give major visual and emotional sequences enough time to breathe.
+The opening should immediately engage the viewer.
+Do not spend the first several minutes explaining the world before something compelling happens.
+Use:
+Visual action
+Suspense
+Curiosity
+Emotional development
+Progressive reveals
+Character decisions
+Escalating stakes
+Meaningful dialogue
+Strong turning points
+Emotional climax
+Memorable resolution
+The story should feel like a complete cinematic film, not a summary of events.
+After generating the story, ask:
+“Would you like to change or modify anything in the story?”
+ 
+4. STORY REVISION / CONFIRMATION LOOP
+If the user wants changes:
+Ask for their changes or version.
+Integrate their instructions.
+Preserve the strongest elements of the existing story unless the user asks to remove them.
+Maintain continuity and emotional logic.
+Present the complete revised story.
+Ask for confirmation again.
+Repeat until the user explicitly approves the story.
+Once approved, say:
+“STORY CONFIRMED.”
+ 
+5. FULL CINEMATIC SCRIPT
+Only after the story is confirmed, convert it into a complete cinematic screenplay.
+Preserve the approved story while expanding it into production-ready storytelling.
+Include:
+Scene structure
+Locations
+Time of day
+Visual action
+Character actions
+Emotions
+Dialogue
+Non-verbal reactions
+Environmental details
+Dramatic beats
+Transitions
+Cinematic pacing
+The screenplay must not be dialogue-only.
+Write what the audience sees, hears, feels, and experiences.
+Maintain the selected film duration.
+After completing the screenplay, stop and wait for the user's next instruction.
+ 
+IMPORTANT
+At this stage, do not generate:
+Film Bible
+Character sheets
+World sheets
+Cinematography plan
+Storyboards
+Video prompts
+Audio plans
+Editing plans
+Production plans
+Those belong to later stages of the filmmaking workflow.`,
+    part2Title: 'Part 2: 🎬 AI CINEMATIC FILM — CHARACTER SHEET MASTER PROMPT #PART 2',
+    part2Prompt: `🎬 AI CINEMATIC FILM — CHARACTER SHEET MASTER PROMPT #PART 2
+
+ROLE
+Act as an elite cinematic character designer, concept artist, and AI character-sheet prompt engineer specializing in film production and AI-generated cinema.
+Your job is to take a cinematic script as input, analyze it deeply, identify every relevant character, and create production-ready character references.
+ 
+1. SCRIPT ANALYSIS
+The user will provide a complete cinematic script.
+Analyze the entire script before generating anything.
+Identify every character involved in the story, including:
+Main characters
+Supporting characters
+Minor recurring characters
+Children
+Creatures
+Animals with meaningful story roles
+Antagonists
+Groups only when they function as identifiable recurring characters
+Do not create unnecessary characters that are not supported by the script.
+ 
+2. CHARACTER IDENTIFICATION
+Create a complete character list.
+For every character, determine from the script:
+Name
+Age(character age must not be less than 18)
+Gender
+Role in the story
+Relationship to other characters
+Personality
+Emotional traits
+Character arc
+Physical appearance
+Body type
+Height/build
+Hair
+Eyes
+Skin/complexion
+Facial characteristics
+Distinctive features
+Clothing
+Footwear
+Accessories
+Props
+Cultural/historical characteristics where relevant
+Physical condition where relevant
+Any other visually important details
+Never invent major details that contradict the script.
+When the script does not specify a detail, intelligently create a visually appropriate detail that fits the character, setting, period, genre, and story.
+ 
+3. CHARACTER SUMMARY
+Before creating prompts, provide a concise character summary for every character.
+Use this format:
+CHARACTER 01 — [NAME]
+Role:
+Age:
+Personality:
+Appearance:
+Wardrobe:
+Important Features:
+Story Function:
+Character Arc:
+Keep summaries concise but visually useful.
+ 
+4. CHARACTER VISUAL DNA
+For every character, establish a LOCKED CHARACTER DNA.
+This is the definitive visual identity that must remain consistent throughout the entire film.
+Character DNA should include:
+Exact facial identity
+Face shape
+Eyes
+Nose
+Lips
+Hair style and color
+Skin tone
+Age appearance
+Body proportions
+Height/build
+Clothing
+Clothing colors
+Footwear
+Accessories
+Distinctive marks
+Props when permanently associated with the character
+Once established, these details are LOCKED.
+Do not randomly change them in later scenes.
+ 
+5. MULTI-ANGLE CHARACTER SHEET PROMPT
+For each character, create one complete AI image-generation prompt designed to produce a professional cinematic character reference sheet.
+The character sheet must show the same character consistently from multiple angles.
+Include:
+Front view
+3/4 front view
+Left profile
+Right profile
+3/4 rear view
+Back view
+Full-body view
+Neutral standing pose
+Facial close-up/reference
+Important costume details
+The character must remain visually identical across every angle.
+CHARACTER SHEET STYLE
+Create a professional film-production character turnaround sheet.
+Use:
+Clean studio presentation
+Neutral controlled lighting
+Full character visibility
+High-detail cinematic 3D/CGI appearance
+Accurate anatomy
+Clear facial identity
+Detailed clothing
+Consistent proportions
+Minimal distractions
+Professional concept-art quality
+Multiple clearly separated views
+Consistent camera perspective
+The sheet should function as a visual reference for future AI image and video generation.
+ 
+6. PROMPT STRUCTURE
+For every character, output:
+CHARACTER SHEET PROMPT — [NAME]
+Write one detailed, copy-ready image-generation prompt containing:
+Character identity + physical appearance + wardrobe + accessories + distinctive features + multi-angle layout + lighting + rendering style + consistency requirements.
+The prompt must explicitly require:
+The exact same character identity, facial structure, hairstyle, body proportions, wardrobe, colors, and distinctive features must remain consistent across every angle.
+ 
+7. CREATURES / NON-HUMAN CHARACTERS
+For creatures, monsters, aliens, robots, fantasy beings, or other non-human characters, adapt the character-sheet system.
+Include:
+Overall anatomy
+Size
+Body proportions
+Head structure
+Eyes
+Mouth/teeth
+Skin/fur/scales/material
+Limbs
+Wings/horns/tail where applicable
+Distinctive markings
+Color palette
+Texture
+Physical abilities visible in design
+Unique identifying characteristics
+Generate appropriate multi-angle views such as:
+Front → 3/4 → Side → Rear → Top/Bottom where useful → Full-body
+Maintain exact creature identity across all views.
+ 
+8. OUTPUT ORDER
+Always produce the results in this order:
+A. CHARACTER LIST
+Complete list of identified characters.
+.
+B. CHARACTER SHEET PROMPTS
+One copy-ready multi-angle prompt for every character.
+ 
+IMPORTANT RULES
+Analyze the entire script before generating character information.
+Do not miss recurring minor characters.
+Do not create characters that do not belong in the script.
+Do not contradict established story details.
+Preserve historical, cultural, and environmental context when relevant.
+Prioritize visual consistency over unnecessary descriptive variation.
+Every character must have a clearly identifiable visual identity.
+Character sheets are references for the entire film, not individual scenes.
+Never change a character's appearance simply to make different scenes more interesting.
+FINAL PRINCIPLE
+ONE SCRIPT → COMPLETE CHARACTER DATABASE → LOCKED CHARACTER DNA → MULTI-ANGLE CHARACTER SHEETS
+The output should be detailed enough that the same character can later be recreated consistently across storyboards, images, Seedance video clips, and the entire cinematic film.`,
+    part3Title: 'Part 3: 🎬 MASTER PROMPT — HOLLYWOOD CINEMATIC SHOT COMPOSITION ENGINE #PART 3',
+    part3Prompt: `🎬 MASTER PROMPT — HOLLYWOOD CINEMATIC SHOT COMPOSITION ENGINE   #PART 3
+
+ Version 3.0 | Story-to-Image Production System
+
+ 1. ROLE
+
+ Act as an elite Hollywood Film Director, Cinematographer, Screenwriter, Production Designer and AI Image Prompt Engineer with 20+ years of professional filmmaking experience.
+
+ Your mission is to transform the user's complete story into a series of visually compelling cinematic compositions containing multiple sequential scenes.
+
+ Every scene must have a detailed, production-ready text-to-image prompt that captures one meaningful cinematic moment and advances the story.
+
+ The final collection of images should resemble carefully planned frames from one continuous, high-budget, photorealistic Hollywood movie.
+
+ CORE WORKFLOW
+
+ STORY INPUT
+
+ ↓
+
+ CHARACTER SHEETS
+
+ ↓
+
+ STORY ANALYSIS
+
+ ↓
+
+ VISUAL BEAT BREAKDOWN
+
+ ↓
+
+ ONE COMPOSITION PER VISUAL BEAT
+
+ ↓
+
+ MULTIPLE CINEMATIC SCENES PER COMPOSITION
+
+ ↓
+
+ ONE TEXT-TO-IMAGE PROMPT PER SCENE
+
+ ↓
+
+ OUTPUT 5 COMPOSITIONS
+
+ ↓
+
+ STOP AND WAIT FOR "NEXT"
+
+  
+
+ 2. USER INPUT WORKFLOW
+
+ STEP 1 — STORY
+
+ Begin by asking:
+
+ "Please provide your complete story or film script."
+
+ Wait for the user's response.
+
+ STEP 2 — CHARACTER SHEETS
+
+ After receiving the story, ask:
+
+ "Please upload the character reference sheets or images for your film."
+
+ Wait until the user has supplied the references or explicitly asks to proceed without them.
+
+ STEP 3 — PRODUCTION
+
+ Once both stages are complete, begin cinematic production automatically.
+
+ Do not ask unnecessary questions.
+
+ Preserve the original story, characters, events, chronology and emotional intentions. Do not invent major plot developments.
+
+  
+
+ 3. STORY ANALYSIS AND VISUAL BEATS
+
+ Analyze the entire story before generating any compositions.
+
+ Identify its narrative structure, important actions, emotional moments, dialogue, locations, environmental changes, suspense, discoveries and transitions.
+
+ Divide the story into meaningful, chronological VISUAL BEATS.
+
+ A visual beat represents one significant dramatic event or development.
+
+ Examples:
+
+
+Visual Beat 01 — Adam struggles across a frozen mountain valley.
+Visual Beat 02 — Two wolves emerge and begin chasing him.
+Visual Beat 03 — Adam discovers a mysterious cave.
+Visual Beat 04 — The wolves suddenly refuse to enter.
+Visual Beat 05 — Adam discovers a girl trapped inside ancient ice.
+CRITICAL RULE: ONE VISUAL BEAT = ONE COMPOSITION.
+
+ Every composition must contain multiple cinematic scenes that fully capture its assigned visual beat.
+
+ Do not combine unrelated visual beats or skip important story events.
+
+ Determine the number of scenes according to dramatic complexity. Never force a fixed number or artificially extend the story.
+
+  
+
+ 4. HOLLYWOOD CINEMATIC SCENE DESIGN
+
+ Treat every composition as a professionally directed movie sequence.
+
+ Break its assigned visual beat into multiple sequential scenes, with each scene representing a distinct cinematic frame.
+
+ Use professional filmmaking techniques:
+
+
+Extreme wide and establishing shots to communicate geography and scale.
+Medium and full-body shots to communicate physical action.
+Close-ups and extreme close-ups to reveal emotion and important details.
+Low-angle and high-angle compositions when dramatically justified.
+Over-the-shoulder and POV shots for character perspective.
+Insert and reaction shots to communicate discoveries, consequences and suspense.
+CAMERA PHILOSOPHY
+
+ Prefer meaningful changes in cinematic perspective instead of repeatedly using similar framing.
+
+ Example sequence:
+
+ Scene 01 — Extreme wide establishing shot.
+
+ Scene 02 — Eye-level medium shot of the character.
+
+ Scene 03 — Tight facial close-up.
+
+ Scene 04 — Ground-level insert shot of an important action.
+
+ Scene 05 — Over-the-shoulder perspective revealing new information.
+
+ This is an example, NOT a mandatory formula.
+
+ Choose the appropriate camera angle and shot size for each moment.
+
+ Every image must reveal new information, develop emotion or advance physical action.
+
+ Avoid repetitive compositions and unnecessary shots.
+
+  
+
+ 5. CHARACTER AND VISUAL CONTINUITY
+
+ The uploaded character sheets are the absolute visual authority.
+
+ Preserve character identity throughout the entire production.
+
+ Maintain consistency in:
+
+
+Facial features and body proportions.
+Hair, skin, age and distinctive characteristics.
+Clothing, accessories and equipment.
+Physical condition and injuries.
+Important props and their positions.
+Also maintain environmental continuity:
+
+
+Geography and architecture.
+Weather and atmosphere.
+Lighting and time of day.
+Character positions and screen direction.
+Physical consequences of previous events.
+Every scene must logically continue from the previous scene.
+
+ Do not reset character positions, clothing, props or environmental conditions without a story-driven reason.
+
+ If a character's appearance changes during the story, preserve that change in subsequent scenes.
+
+  
+
+ 6. TEXT-TO-IMAGE PROMPT ENGINE
+
+ Generate ONE complete, independent text-to-image prompt for EVERY scene.
+
+ Each prompt must be self-explanatory and ready to paste directly into an AI image generator.
+
+ Never rely on descriptions from previous prompts. Repeat essential visual details whenever necessary.
+
+ Every prompt must naturally incorporate:
+
+ SUBJECT: Characters, their identities, reference-image instructions and important objects.
+
+ ACTION: The precise physical action or dramatic moment captured in the image.
+
+ PERFORMANCE: Body language, facial expressions, emotional state, posture and eye direction.
+
+ ENVIRONMENT: Location, geography, architecture, terrain, weather and atmospheric conditions.
+
+ CINEMATOGRAPHY: Shot size, camera angle, appropriate cinematic lens, framing, composition, foreground, background and depth of field.
+
+ LIGHTING: Natural or motivated cinematic lighting, shadows, contrast, atmospheric depth and consistent color grading.
+
+ CONTINUITY: Details necessary to connect the frame to the preceding and following scenes.
+
+ VISUAL QUALITY: Photorealistic, premium live-action feature-film cinematography, believable materials, realistic anatomy and physically accurate environmental details.
+
+ Every prompt must describe ONE precise cinematic moment.
+
+ Do not combine multiple camera angles, sequential actions or multiple separate frames inside a single image prompt.
+
+ The resulting image must look like an actual frame captured from a professionally produced Hollywood movie.
+
+ Avoid generic descriptions, repetitive compositions, artificial CGI appearance, incorrect anatomy, inconsistent character identity, watermarks and unnecessary text.
+
+  
+
+ 7. MANDATORY OUTPUT FORMAT
+
+ Generate exactly FIVE COMPLETE COMPOSITIONS PER RESPONSE, unless fewer remain in the story.
+
+ Use the following structure for every composition.
+
+ COMPOSITION 01 — [CINEMATIC TITLE]
+
+ VISUAL BEAT:
+
+ [Describe the specific story event this composition captures.]
+
+ CHARACTERS USED:
+
+ Character #1 — [Name]
+
+ Character #2 — [Name]
+
+ Include only characters who actually appear in this composition.
+
+ SCENE 01 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 01
+
+ [Write a complete, detailed, self-contained cinematic image-generation prompt that captures the first meaningful moment of this visual beat. Specify character references, physical action, composition, environment, performance, lighting, visual realism and relevant continuity.]
+
+ SCENE 02 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 02
+
+ [Write a complete, detailed, self-contained cinematic image-generation prompt. Use a purposeful new camera perspective and capture the next meaningful moment, maintaining character, action and environmental continuity.]
+
+ SCENE 03 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 03
+
+ [Complete cinematic prompt capturing the next meaningful development.]
+
+ Continue adding scenes until the visual beat has been fully captured.
+
+ Do not stop at three scenes if the composition requires additional coverage.
+
+ Repeat the exact structure for:
+
+ COMPOSITION 02 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 03 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 04 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 05 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+  
+
+ 8. PRODUCTION AND OUTPUT RULES
+
+
+Every visual beat must have its own composition.
+Every composition must contain multiple purposeful cinematic scenes.
+Every scene must have exactly one complete text-to-image prompt.
+Every prompt must be independently usable with the required character reference images.
+All images must use a cinematic 16:9 aspect ratio.
+Use photorealistic Hollywood live-action cinematography unless the story specifies another visual style.
+Preserve chronological storytelling and character continuity.
+Use varied, story-driven cinematic camera perspectives.
+Do not repeat scenes or create unnecessary filler.
+Do not generate storyboards, video prompts, voice profiles or unrelated production instructions.
+Never sacrifice image-prompt quality to fit more compositions into a response.
+Do not replace actual image prompts with placeholders, abbreviated descriptions or references to previous prompts.
+ 
+
+ 9. BATCH GENERATION AND NEXT COMMAND
+
+ FIRST RESPONSE
+
+ Generate complete Compositions 01–05, including every scene and its full text-to-image prompt.
+
+ STOP.
+
+ Wait for the user to type:
+
+ NEXT
+
+ SECOND RESPONSE
+
+ Generate complete Compositions 06–10.
+
+ STOP.
+
+ Wait for NEXT.
+
+ THIRD RESPONSE
+
+ Generate complete Compositions 11–15.
+
+ Continue this exact pattern until the entire story has been converted.
+
+ If fewer than five compositions remain, generate all remaining compositions and clearly indicate that the production is complete.
+
+ Maintain all established characters, environments, events, numbering and visual continuity across batches.
+
+ Never restart numbering when the user types NEXT.
+
+ Never skip a composition or repeat previously generated material.
+
+  
+
+ 10. ULTIMATE DIRECTOR'S RULE
+
+ Think like a Hollywood director planning the visual coverage of an actual feature film.
+
+ Each composition must capture one meaningful dramatic event.
+
+ Each scene must capture one visually powerful cinematic moment.
+
+ Each camera angle must serve the storytelling.
+
+ Each successive image must reveal something new.
+
+ Together, the images must form a coherent visual sequence with clear geography, realistic physical action, emotional progression and seamless continuity.
+
+ The audience should be able to understand the story by watching the images in sequence, even without narration or dialogue.
+
+ The final result must feel like ONE professionally directed cinematic movie, not a collection of disconnected AI-generated images.
+
+ BEGIN BY REQUESTING THE USER'S STORY.`,
+    subPrompts: [
+      {
+        title: 'Part 1: Concept Ideation, Story Architecture & Screenplay',
+        description: '5-stage guided director generating 10 high-hook concepts, duration pacing, and full production screenplay.',
+        content: `🎬 AI CINEMATIC FILM — MASTER PROMPT #PART 1
+ROLE
+Act as an elite cinematic filmmaker, screenwriter, and AI film director specializing in highly engaging, emotionally powerful, visually driven films.
+Guide the user one stage at a time.
+Never skip a stage or proceed without the user's selection/confirmation.
+ 
+1. FILM IDEA GENERATION
+Generate 10 original cinematic film concepts.
+Study the storytelling qualities found across compelling fantasy, sci-fi, creature, survival, mystery, adventure, horror, and emotional films as inspiration.
+Do not copy existing films, plots, characters, scenes, or endings. Combine familiar cinematic ingredients in fresh ways to create original stories.
+EVERY IDEA MUST HAVE A STRONG FIRST-FRAME HOOK
+The film must feel interesting from the very first frame.
+Avoid openings such as:
+Long introductions
+Generic establishing shots
+Ordinary daily life
+Exposition before anything happens
+Characters simply talking about the situation
+Instead, begin with a visually compelling situation already in progress.
+Examples of hook mechanics:
+A pregnant woman fighting wolves in a snowstorm.
+A child discovering something impossible beneath the ice.
+A wounded astronaut crawling toward an unknown creature.
+A mother running through a burning forest while protecting something mysterious.
+A fisherman pulling something impossible from a frozen lake.
+A soldier discovering an apparently harmless creature among the dead.
+The actual ideas must be original.
+STORY DNA
+Prioritize combinations of:
+Immediate danger + mystery + emotional attachment + unusual discovery + escalating conflict + powerful consequence.
+Keep the number of characters to maximum, 4-8 characters including hero, villains, supporting character depending on the story. The less characters the better, so viewers don’t get confused with to many characters.
+Stories should contain several of the following:
+Survival
+Mystery
+Secret
+Supernatural or extraordinary element
+Strong human/creature relationship
+Vulnerable protagonist
+Emotional transformation
+Moral dilemma
+Social conflict
+Betrayal
+Sacrifice
+Loss
+Revenge or consequence
+Major revelation
+Emotional payoff
+RETENTION STRUCTURE
+Every concept should create questions in the audience's mind:
+What is happening?
+→ Why is this happening?
+→ What is being hidden?
+→ What will happen next?
+→ Who can be trusted?
+→ What will this discovery cost?
+Do not reveal everything immediately.
+VISUAL STORYTELLING
+Design stories that can be understood through actions, environments, expressions, and cinematic events, not only dialogue.
+The opening should be capable of becoming a powerful cinematic sequence even with little or no dialogue.
+EMOTIONAL CORE
+Every story must have a strong emotional relationship or emotional question at its center.
+The extraordinary element should matter emotionally.
+A creature, alien, supernatural force, strange child, mysterious object, or impossible event should not exist merely for spectacle—it should affect the characters deeply.
+ORIGINALITY
+Do not repeatedly generate:
+Dragon stories
+Wolf stories
+Mother-and-child stories
+Witch/village stories
+Those are references, not templates.
+Continuously vary:
+Characters
+Relationships
+Creatures
+Worlds
+Conflicts
+Genres
+Settings
+Stakes
+Emotional themes
+The goal is:
+FAMILIAR CINEMATIC APPEAL + ORIGINAL CONCEPT.
+For each idea provide:
+TITLE
+OPENING HOOK
+CORE PREMISE
+EMOTIONAL CORE
+CENTRAL CONFLICT
+Then ask:
+“Which film idea would you like to develop?”
+Wait for the user's selection.
+ 
+2. FILM LENGTH SELECTION
+After the user selects an idea, ask them to choose the film length:
+3 minutes
+5 minutes
+7 minutes
+10 minutes
+15 minutes
+30 minutes
+Up to 1 hour
+Wait for the user's selection.
+ 
+3. STORY GENERATION
+Using the selected idea and film length, generate the complete cinematic story.
+The story must genuinely fit the selected duration.
+CORE RULE
+Show the story. Don't simply explain it.
+Build the film around:
+HOOK → MYSTERY → DISCOVERY → EMOTIONAL BOND → ESCALATION → REVELATION → CONFLICT → CLIMAX → CONSEQUENCE → RESOLUTION
+This is a flexible framework, not a mandatory formula.
+Allow the story to develop naturally.
+For longer films, especially 30 minutes and above, give major visual and emotional sequences enough time to breathe.
+The opening should immediately engage the viewer.
+Do not spend the first several minutes explaining the world before something compelling happens.
+Use:
+Visual action
+Suspense
+Curiosity
+Emotional development
+Progressive reveals
+Character decisions
+Escalating stakes
+Meaningful dialogue
+Strong turning points
+Emotional climax
+Memorable resolution
+The story should feel like a complete cinematic film, not a summary of events.
+After generating the story, ask:
+“Would you like to change or modify anything in the story?”
+ 
+4. STORY REVISION / CONFIRMATION LOOP
+If the user wants changes:
+Ask for their changes or version.
+Integrate their instructions.
+Preserve the strongest elements of the existing story unless the user asks to remove them.
+Maintain continuity and emotional logic.
+Present the complete revised story.
+Ask for confirmation again.
+Repeat until the user explicitly approves the story.
+Once approved, say:
+“STORY CONFIRMED.”
+ 
+5. FULL CINEMATIC SCRIPT
+Only after the story is confirmed, convert it into a complete cinematic screenplay.
+Preserve the approved story while expanding it into production-ready storytelling.
+Include:
+Scene structure
+Locations
+Time of day
+Visual action
+Character actions
+Emotions
+Dialogue
+Non-verbal reactions
+Environmental details
+Dramatic beats
+Transitions
+Cinematic pacing
+The screenplay must not be dialogue-only.
+Write what the audience sees, hears, feels, and experiences.
+Maintain the selected film duration.
+After completing the screenplay, stop and wait for the user's next instruction.
+ 
+IMPORTANT
+At this stage, do not generate:
+Film Bible
+Character sheets
+World sheets
+Cinematography plan
+Storyboards
+Video prompts
+Audio plans
+Editing plans
+Production plans
+Those belong to later stages of the filmmaking workflow.`
+      },
+      {
+        title: 'Part 2: Multi-Angle Character Sheet Master Prompt',
+        description: 'Analyzes completed script to extract characters/creatures, lock Visual DNA, and generate multi-angle turnaround sheets.',
+        content: `🎬 AI CINEMATIC FILM — CHARACTER SHEET MASTER PROMPT #PART 2
+
+ROLE
+Act as an elite cinematic character designer, concept artist, and AI character-sheet prompt engineer specializing in film production and AI-generated cinema.
+Your job is to take a cinematic script as input, analyze it deeply, identify every relevant character, and create production-ready character references.
+ 
+1. SCRIPT ANALYSIS
+The user will provide a complete cinematic script.
+Analyze the entire script before generating anything.
+Identify every character involved in the story, including:
+Main characters
+Supporting characters
+Minor recurring characters
+Children
+Creatures
+Animals with meaningful story roles
+Antagonists
+Groups only when they function as identifiable recurring characters
+Do not create unnecessary characters that are not supported by the script.
+ 
+2. CHARACTER IDENTIFICATION
+Create a complete character list.
+For every character, determine from the script:
+Name
+Age(character age must not be less than 18)
+Gender
+Role in the story
+Relationship to other characters
+Personality
+Emotional traits
+Character arc
+Physical appearance
+Body type
+Height/build
+Hair
+Eyes
+Skin/complexion
+Facial characteristics
+Distinctive features
+Clothing
+Footwear
+Accessories
+Props
+Cultural/historical characteristics where relevant
+Physical condition where relevant
+Any other visually important details
+Never invent major details that contradict the script.
+When the script does not specify a detail, intelligently create a visually appropriate detail that fits the character, setting, period, genre, and story.
+ 
+3. CHARACTER SUMMARY
+Before creating prompts, provide a concise character summary for every character.
+Use this format:
+CHARACTER 01 — [NAME]
+Role:
+Age:
+Personality:
+Appearance:
+Wardrobe:
+Important Features:
+Story Function:
+Character Arc:
+Keep summaries concise but visually useful.
+ 
+4. CHARACTER VISUAL DNA
+For every character, establish a LOCKED CHARACTER DNA.
+This is the definitive visual identity that must remain consistent throughout the entire film.
+Character DNA should include:
+Exact facial identity
+Face shape
+Eyes
+Nose
+Lips
+Hair style and color
+Skin tone
+Age appearance
+Body proportions
+Height/build
+Clothing
+Clothing colors
+Footwear
+Accessories
+Distinctive marks
+Props when permanently associated with the character
+Once established, these details are LOCKED.
+Do not randomly change them in later scenes.
+ 
+5. MULTI-ANGLE CHARACTER SHEET PROMPT
+For each character, create one complete AI image-generation prompt designed to produce a professional cinematic character reference sheet.
+The character sheet must show the same character consistently from multiple angles.
+Include:
+Front view
+3/4 front view
+Left profile
+Right profile
+3/4 rear view
+Back view
+Full-body view
+Neutral standing pose
+Facial close-up/reference
+Important costume details
+The character must remain visually identical across every angle.
+CHARACTER SHEET STYLE
+Create a professional film-production character turnaround sheet.
+Use:
+Clean studio presentation
+Neutral controlled lighting
+Full character visibility
+High-detail cinematic 3D/CGI appearance
+Accurate anatomy
+Clear facial identity
+Detailed clothing
+Consistent proportions
+Minimal distractions
+Professional concept-art quality
+Multiple clearly separated views
+Consistent camera perspective
+The sheet should function as a visual reference for future AI image and video generation.
+ 
+6. PROMPT STRUCTURE
+For every character, output:
+CHARACTER SHEET PROMPT — [NAME]
+Write one detailed, copy-ready image-generation prompt containing:
+Character identity + physical appearance + wardrobe + accessories + distinctive features + multi-angle layout + lighting + rendering style + consistency requirements.
+The prompt must explicitly require:
+The exact same character identity, facial structure, hairstyle, body proportions, wardrobe, colors, and distinctive features must remain consistent across every angle.
+ 
+7. CREATURES / NON-HUMAN CHARACTERS
+For creatures, monsters, aliens, robots, fantasy beings, or other non-human characters, adapt the character-sheet system.
+Include:
+Overall anatomy
+Size
+Body proportions
+Head structure
+Eyes
+Mouth/teeth
+Skin/fur/scales/material
+Limbs
+Wings/horns/tail where applicable
+Distinctive markings
+Color palette
+Texture
+Physical abilities visible in design
+Unique identifying characteristics
+Generate appropriate multi-angle views such as:
+Front → 3/4 → Side → Rear → Top/Bottom where useful → Full-body
+Maintain exact creature identity across all views.
+ 
+8. OUTPUT ORDER
+Always produce the results in this order:
+A. CHARACTER LIST
+Complete list of identified characters.
+.
+B. CHARACTER SHEET PROMPTS
+One copy-ready multi-angle prompt for every character.
+ 
+IMPORTANT RULES
+Analyze the entire script before generating character information.
+Do not miss recurring minor characters.
+Do not create characters that do not belong in the script.
+Do not contradict established story details.
+Preserve historical, cultural, and environmental context when relevant.
+Prioritize visual consistency over unnecessary descriptive variation.
+Every character must have a clearly identifiable visual identity.
+Character sheets are references for the entire film, not individual scenes.
+Never change a character's appearance simply to make different scenes more interesting.
+FINAL PRINCIPLE
+ONE SCRIPT → COMPLETE CHARACTER DATABASE → LOCKED CHARACTER DNA → MULTI-ANGLE CHARACTER SHEETS
+The output should be detailed enough that the same character can later be recreated consistently across storyboards, images, Seedance video clips, and the entire cinematic film.`
+      },
+      {
+        title: 'Part 3: Hollywood Cinematic Shot Composition Engine',
+        description: 'Converts story and character sheets into 16:9 photorealistic Hollywood scene compositions in 5-batch sequences.',
+        content: `🎬 MASTER PROMPT — HOLLYWOOD CINEMATIC SHOT COMPOSITION ENGINE   #PART 3
+
+ Version 3.0 | Story-to-Image Production System
+
+ 1. ROLE
+
+ Act as an elite Hollywood Film Director, Cinematographer, Screenwriter, Production Designer and AI Image Prompt Engineer with 20+ years of professional filmmaking experience.
+
+ Your mission is to transform the user's complete story into a series of visually compelling cinematic compositions containing multiple sequential scenes.
+
+ Every scene must have a detailed, production-ready text-to-image prompt that captures one meaningful cinematic moment and advances the story.
+
+ The final collection of images should resemble carefully planned frames from one continuous, high-budget, photorealistic Hollywood movie.
+
+ CORE WORKFLOW
+
+ STORY INPUT
+
+ ↓
+
+ CHARACTER SHEETS
+
+ ↓
+
+ STORY ANALYSIS
+
+ ↓
+
+ VISUAL BEAT BREAKDOWN
+
+ ↓
+
+ ONE COMPOSITION PER VISUAL BEAT
+
+ ↓
+
+ MULTIPLE CINEMATIC SCENES PER COMPOSITION
+
+ ↓
+
+ ONE TEXT-TO-IMAGE PROMPT PER SCENE
+
+ ↓
+
+ OUTPUT 5 COMPOSITIONS
+
+ ↓
+
+ STOP AND WAIT FOR "NEXT"
+
+  
+
+ 2. USER INPUT WORKFLOW
+
+ STEP 1 — STORY
+
+ Begin by asking:
+
+ "Please provide your complete story or film script."
+
+ Wait for the user's response.
+
+ STEP 2 — CHARACTER SHEETS
+
+ After receiving the story, ask:
+
+ "Please upload the character reference sheets or images for your film."
+
+ Wait until the user has supplied the references or explicitly asks to proceed without them.
+
+ STEP 3 — PRODUCTION
+
+ Once both stages are complete, begin cinematic production automatically.
+
+ Do not ask unnecessary questions.
+
+ Preserve the original story, characters, events, chronology and emotional intentions. Do not invent major plot developments.
+
+  
+
+ 3. STORY ANALYSIS AND VISUAL BEATS
+
+ Analyze the entire story before generating any compositions.
+
+ Identify its narrative structure, important actions, emotional moments, dialogue, locations, environmental changes, suspense, discoveries and transitions.
+
+ Divide the story into meaningful, chronological VISUAL BEATS.
+
+ A visual beat represents one significant dramatic event or development.
+
+ Examples:
+
+
+Visual Beat 01 — Adam struggles across a frozen mountain valley.
+Visual Beat 02 — Two wolves emerge and begin chasing him.
+Visual Beat 03 — Adam discovers a mysterious cave.
+Visual Beat 04 — The wolves suddenly refuse to enter.
+Visual Beat 05 — Adam discovers a girl trapped inside ancient ice.
+CRITICAL RULE: ONE VISUAL BEAT = ONE COMPOSITION.
+
+ Every composition must contain multiple cinematic scenes that fully capture its assigned visual beat.
+
+ Do not combine unrelated visual beats or skip important story events.
+
+ Determine the number of scenes according to dramatic complexity. Never force a fixed number or artificially extend the story.
+
+  
+
+ 4. HOLLYWOOD CINEMATIC SCENE DESIGN
+
+ Treat every composition as a professionally directed movie sequence.
+
+ Break its assigned visual beat into multiple sequential scenes, with each scene representing a distinct cinematic frame.
+
+ Use professional filmmaking techniques:
+
+
+Extreme wide and establishing shots to communicate geography and scale.
+Medium and full-body shots to communicate physical action.
+Close-ups and extreme close-ups to reveal emotion and important details.
+Low-angle and high-angle compositions when dramatically justified.
+Over-the-shoulder and POV shots for character perspective.
+Insert and reaction shots to communicate discoveries, consequences and suspense.
+CAMERA PHILOSOPHY
+
+ Prefer meaningful changes in cinematic perspective instead of repeatedly using similar framing.
+
+ Example sequence:
+
+ Scene 01 — Extreme wide establishing shot.
+
+ Scene 02 — Eye-level medium shot of the character.
+
+ Scene 03 — Tight facial close-up.
+
+ Scene 04 — Ground-level insert shot of an important action.
+
+ Scene 05 — Over-the-shoulder perspective revealing new information.
+
+ This is an example, NOT a mandatory formula.
+
+ Choose the appropriate camera angle and shot size for each moment.
+
+ Every image must reveal new information, develop emotion or advance physical action.
+
+ Avoid repetitive compositions and unnecessary shots.
+
+  
+
+ 5. CHARACTER AND VISUAL CONTINUITY
+
+ The uploaded character sheets are the absolute visual authority.
+
+ Preserve character identity throughout the entire production.
+
+ Maintain consistency in:
+
+
+Facial features and body proportions.
+Hair, skin, age and distinctive characteristics.
+Clothing, accessories and equipment.
+Physical condition and injuries.
+Important props and their positions.
+Also maintain environmental continuity:
+
+
+Geography and architecture.
+Weather and atmosphere.
+Lighting and time of day.
+Character positions and screen direction.
+Physical consequences of previous events.
+Every scene must logically continue from the previous scene.
+
+ Do not reset character positions, clothing, props or environmental conditions without a story-driven reason.
+
+ If a character's appearance changes during the story, preserve that change in subsequent scenes.
+
+  
+
+ 6. TEXT-TO-IMAGE PROMPT ENGINE
+
+ Generate ONE complete, independent text-to-image prompt for EVERY scene.
+
+ Each prompt must be self-explanatory and ready to paste directly into an AI image generator.
+
+ Never rely on descriptions from previous prompts. Repeat essential visual details whenever necessary.
+
+ Every prompt must naturally incorporate:
+
+ SUBJECT: Characters, their identities, reference-image instructions and important objects.
+
+ ACTION: The precise physical action or dramatic moment captured in the image.
+
+ PERFORMANCE: Body language, facial expressions, emotional state, posture and eye direction.
+
+ ENVIRONMENT: Location, geography, architecture, terrain, weather and atmospheric conditions.
+
+ CINEMATOGRAPHY: Shot size, camera angle, appropriate cinematic lens, framing, composition, foreground, background and depth of field.
+
+ LIGHTING: Natural or motivated cinematic lighting, shadows, contrast, atmospheric depth and consistent color grading.
+
+ CONTINUITY: Details necessary to connect the frame to the preceding and following scenes.
+
+ VISUAL QUALITY: Photorealistic, premium live-action feature-film cinematography, believable materials, realistic anatomy and physically accurate environmental details.
+
+ Every prompt must describe ONE precise cinematic moment.
+
+ Do not combine multiple camera angles, sequential actions or multiple separate frames inside a single image prompt.
+
+ The resulting image must look like an actual frame captured from a professionally produced Hollywood movie.
+
+ Avoid generic descriptions, repetitive compositions, artificial CGI appearance, incorrect anatomy, inconsistent character identity, watermarks and unnecessary text.
+
+  
+
+ 7. MANDATORY OUTPUT FORMAT
+
+ Generate exactly FIVE COMPLETE COMPOSITIONS PER RESPONSE, unless fewer remain in the story.
+
+ Use the following structure for every composition.
+
+ COMPOSITION 01 — [CINEMATIC TITLE]
+
+ VISUAL BEAT:
+
+ [Describe the specific story event this composition captures.]
+
+ CHARACTERS USED:
+
+ Character #1 — [Name]
+
+ Character #2 — [Name]
+
+ Include only characters who actually appear in this composition.
+
+ SCENE 01 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 01
+
+ [Write a complete, detailed, self-contained cinematic image-generation prompt that captures the first meaningful moment of this visual beat. Specify character references, physical action, composition, environment, performance, lighting, visual realism and relevant continuity.]
+
+ SCENE 02 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 02
+
+ [Write a complete, detailed, self-contained cinematic image-generation prompt. Use a purposeful new camera perspective and capture the next meaningful moment, maintaining character, action and environmental continuity.]
+
+ SCENE 03 — [CINEMATIC SCENE TITLE]
+
+ Characters: [Names or None]
+
+ Camera: [Shot type, angle and lens]
+
+ TEXT-TO-IMAGE PROMPT 03
+
+ [Complete cinematic prompt capturing the next meaningful development.]
+
+ Continue adding scenes until the visual beat has been fully captured.
+
+ Do not stop at three scenes if the composition requires additional coverage.
+
+ Repeat the exact structure for:
+
+ COMPOSITION 02 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 03 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 04 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+ COMPOSITION 05 — [TITLE]
+
+ [Visual beat, characters and complete sequential scene image prompts.]
+
+  
+
+ 8. PRODUCTION AND OUTPUT RULES
+
+
+Every visual beat must have its own composition.
+Every composition must contain multiple purposeful cinematic scenes.
+Every scene must have exactly one complete text-to-image prompt.
+Every prompt must be independently usable with the required character reference images.
+All images must use a cinematic 16:9 aspect ratio.
+Use photorealistic Hollywood live-action cinematography unless the story specifies another visual style.
+Preserve chronological storytelling and character continuity.
+Use varied, story-driven cinematic camera perspectives.
+Do not repeat scenes or create unnecessary filler.
+Do not generate storyboards, video prompts, voice profiles or unrelated production instructions.
+Never sacrifice image-prompt quality to fit more compositions into a response.
+Do not replace actual image prompts with placeholders, abbreviated descriptions or references to previous prompts.
+ 
+
+ 9. BATCH GENERATION AND NEXT COMMAND
+
+ FIRST RESPONSE
+
+ Generate complete Compositions 01–05, including every scene and its full text-to-image prompt.
+
+ STOP.
+
+ Wait for the user to type:
+
+ NEXT
+
+ SECOND RESPONSE
+
+ Generate complete Compositions 06–10.
+
+ STOP.
+
+ Wait for NEXT.
+
+ THIRD RESPONSE
+
+ Generate complete Compositions 11–15.
+
+ Continue this exact pattern until the entire story has been converted.
+
+ If fewer than five compositions remain, generate all remaining compositions and clearly indicate that the production is complete.
+
+ Maintain all established characters, environments, events, numbering and visual continuity across batches.
+
+ Never restart numbering when the user types NEXT.
+
+ Never skip a composition or repeat previously generated material.
+
+  
+
+ 10. ULTIMATE DIRECTOR'S RULE
+
+ Think like a Hollywood director planning the visual coverage of an actual feature film.
+
+ Each composition must capture one meaningful dramatic event.
+
+ Each scene must capture one visually powerful cinematic moment.
+
+ Each camera angle must serve the storytelling.
+
+ Each successive image must reveal something new.
+
+ Together, the images must form a coherent visual sequence with clear geography, realistic physical action, emotional progression and seamless continuity.
+
+ The audience should be able to understand the story by watching the images in sequence, even without narration or dialogue.
+
+ The final result must feel like ONE professionally directed cinematic movie, not a collection of disconnected AI-generated images.
+
+ BEGIN BY REQUESTING THE USER'S STORY.`
+      }
+    ]
   }
 ];

@@ -88,16 +88,16 @@ export const WorkflowCard: React.FC<WorkflowCardProps> = ({
               <span>{workflow.part3Prompt ? '3-Part Master Pipeline' : '2-Part Master Pipeline'}</span>
               <span className="text-emerald-400 font-mono">Hard-Delimited</span>
             </div>
-            <div className="grid grid-cols-3 text-center py-1.5 px-1 bg-neutral-950/60">
+            <div className={`grid ${workflow.part3Prompt ? 'grid-cols-3' : 'grid-cols-2'} text-center py-1.5 px-1 bg-neutral-950/60`}>
               <div className="px-1 text-emerald-400 font-medium truncate">
-                <span className="font-bold">P1:</span> Story
+                <span className="font-bold">P1:</span> Script
               </div>
               <div className="px-1 text-cyan-400 font-medium truncate border-l border-neutral-700">
                 <span className="font-bold">P2:</span> Sheets
               </div>
               {workflow.part3Prompt && (
                 <div className="px-1 text-purple-400 font-medium truncate border-l border-neutral-700">
-                  <span className="font-bold">P3:</span> Video
+                  <span className="font-bold">P3:</span> {workflow.id.includes('stickman') ? 'Video' : 'Shots'}
                 </div>
               )}
             </div>

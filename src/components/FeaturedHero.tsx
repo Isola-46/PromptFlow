@@ -100,33 +100,45 @@ export const FeaturedHero: React.FC<FeaturedHeroProps> = ({
                 </span>
                 <span className="text-emerald-400 font-mono text-[11px]">Hard-Delimited Stages</span>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3">
+              <div className={`grid grid-cols-1 ${workflow.part3Prompt ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
                 <div className="p-3 bg-neutral-950/40 space-y-0.5">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-black uppercase text-emerald-400 tracking-wider">Part 1</span>
-                    <span className="text-[9px] text-neutral-500 uppercase">Input: Topic</span>
+                    <span className="text-[9px] text-neutral-500 uppercase">Input: {workflow.id.includes('stickman') ? 'Topic' : 'Idea / Premise'}</span>
                   </div>
-                  <p className="text-xs font-bold text-white">Story Scriptwriter</p>
-                  <p className="text-[11px] text-neutral-400 line-clamp-1">Viral retention narration</p>
+                  <p className="text-xs font-bold text-white">
+                    {workflow.id.includes('stickman') ? 'Story Scriptwriter' : 'Screenplay & Story Engine'}
+                  </p>
+                  <p className="text-[11px] text-neutral-400 line-clamp-1">
+                    {workflow.id.includes('stickman') ? 'Viral retention narration' : '5-stage guided director'}
+                  </p>
                 </div>
 
                 <div className="p-3 bg-neutral-950/40 space-y-0.5 border-t md:border-t-0 md:border-l-2 border-neutral-700">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] font-black uppercase text-cyan-400 tracking-wider">Part 2</span>
-                    <span className="text-[9px] text-neutral-500 uppercase">Input: Story</span>
+                    <span className="text-[9px] text-neutral-500 uppercase">Input: Screenplay</span>
                   </div>
-                  <p className="text-xs font-bold text-white">5 Character Sheets</p>
-                  <p className="text-[11px] text-neutral-400 line-clamp-1">Turnaround views & expressions</p>
+                  <p className="text-xs font-bold text-white">
+                    {workflow.id.includes('stickman') ? '5 Stickman Sheets' : 'Multi-Angle Character Sheets'}
+                  </p>
+                  <p className="text-[11px] text-neutral-400 line-clamp-1">
+                    {workflow.id.includes('stickman') ? 'Turnaround views & expressions' : 'Locked DNA & multi-angle 3D/CGI'}
+                  </p>
                 </div>
 
                 {workflow.part3Prompt && (
                   <div className="p-3 bg-neutral-950/40 space-y-0.5 border-t md:border-t-0 md:border-l-2 border-neutral-700">
                     <div className="flex items-center justify-between">
                       <span className="text-[10px] font-black uppercase text-purple-400 tracking-wider">Part 3</span>
-                      <span className="text-[9px] text-neutral-500 uppercase">Input: Script</span>
+                      <span className="text-[9px] text-neutral-500 uppercase">Input: {workflow.id.includes('stickman') ? 'Script' : 'Story + Sheets'}</span>
                     </div>
-                    <p className="text-xs font-bold text-white">10s Video Prompts</p>
-                    <p className="text-[11px] text-neutral-400 line-clamp-1">Omni Flesh shot-by-shot</p>
+                    <p className="text-xs font-bold text-white">
+                      {workflow.id.includes('stickman') ? '10s Video Prompts' : 'Hollywood Shot Compositions'}
+                    </p>
+                    <p className="text-[11px] text-neutral-400 line-clamp-1">
+                      {workflow.id.includes('stickman') ? 'Omni Flesh shot-by-shot' : '16:9 photorealistic compositions'}
+                    </p>
                   </div>
                 )}
               </div>
@@ -140,20 +152,20 @@ export const FeaturedHero: React.FC<FeaturedHeroProps> = ({
                 onClick={async () => {
                   if (workflow.part1Prompt) {
                     await copyToClipboard(workflow.part1Prompt);
-                    onShowToast('Part 1 (Story Scriptwriter) copied! Paste into ChatGPT or Claude.');
+                    onShowToast(`Part 1 (${workflow.id.includes('stickman') ? 'Story Script' : 'Screenplay'}) copied! Paste into ChatGPT or Claude.`);
                   }
                 }}
                 className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-neutral-850 hover:bg-neutral-700 text-emerald-300 border border-emerald-500/40 shadow-sm transition-all cursor-pointer"
               >
                 <Copy className="w-4 h-4 text-emerald-400" />
-                <span>Copy Part 1: Story Script</span>
+                <span>{workflow.id.includes('stickman') ? 'Copy Part 1: Story Script' : 'Copy Part 1: Screenplay'}</span>
               </button>
 
               <button
                 onClick={async () => {
                   if (workflow.part2Prompt) {
                     await copyToClipboard(workflow.part2Prompt);
-                    onShowToast('Part 2 (5 Stickman Character Sheets) copied! Paste story to generate sheets.');
+                    onShowToast('Part 2 (Character Sheets) copied! Paste script to generate sheets.');
                   }
                 }}
                 className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-neutral-850 hover:bg-neutral-700 text-cyan-300 border border-cyan-500/40 shadow-sm transition-all cursor-pointer"
@@ -167,13 +179,13 @@ export const FeaturedHero: React.FC<FeaturedHeroProps> = ({
                   onClick={async () => {
                     if (workflow.part3Prompt) {
                       await copyToClipboard(workflow.part3Prompt);
-                      onShowToast('Part 3 (Omni Flesh 10-Second Video Prompts) copied! Paste into ChatGPT or Claude.');
+                      onShowToast(`Part 3 (${workflow.id.includes('stickman') ? 'Omni Flesh 10-Second Video Prompts' : 'Hollywood Shot Compositions'}) copied! Paste into ChatGPT or Claude.`);
                     }
                   }}
                   className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-neutral-850 hover:bg-neutral-700 text-purple-300 border border-purple-500/40 shadow-sm transition-all cursor-pointer"
                 >
                   <Copy className="w-4 h-4 text-purple-400" />
-                  <span>Copy Part 3: Video Prompts</span>
+                  <span>{workflow.id.includes('stickman') ? 'Copy Part 3: Video Prompts' : 'Copy Part 3: Shot Compositions'}</span>
                 </button>
               )}
 

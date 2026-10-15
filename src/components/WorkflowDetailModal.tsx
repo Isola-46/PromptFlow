@@ -398,7 +398,13 @@ export const WorkflowDetailModal: React.FC<WorkflowDetailModalProps> = ({
                       }`}
                     >
                       {copiedPart1 ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                      <span>{copiedPart1 ? 'Part 1 Copied!' : 'Copy Part 1: Story Script'}</span>
+                      <span>
+                        {copiedPart1
+                          ? 'Part 1 Copied!'
+                          : workflow.id.includes('stickman')
+                          ? 'Copy Part 1: Story Script'
+                          : 'Copy Part 1: Screenplay'}
+                      </span>
                     </button>
 
                     <button
@@ -423,7 +429,13 @@ export const WorkflowDetailModal: React.FC<WorkflowDetailModalProps> = ({
                         }`}
                       >
                         {copiedPart3 ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                        <span>{copiedPart3 ? 'Part 3 Copied!' : 'Copy Part 3: Video Prompts'}</span>
+                        <span>
+                          {copiedPart3
+                            ? 'Part 3 Copied!'
+                            : workflow.id.includes('stickman')
+                            ? 'Copy Part 3: Video Prompts'
+                            : 'Copy Part 3: Shot Compositions'}
+                        </span>
                       </button>
                     )}
 
@@ -476,7 +488,7 @@ export const WorkflowDetailModal: React.FC<WorkflowDetailModalProps> = ({
                             Part 1
                           </span>
                           <h4 className="text-xs sm:text-sm font-bold text-white">
-                            {workflow.part1Title || 'YouTube Documentary Story Scriptwriter'}
+                            {workflow.part1Title || 'Story Scriptwriter & Screenplay'}
                           </h4>
                         </div>
                         <button
@@ -497,15 +509,15 @@ export const WorkflowDetailModal: React.FC<WorkflowDetailModalProps> = ({
                       <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
                         <div className="flex items-center gap-2 font-mono font-black text-xs sm:text-sm text-amber-400 tracking-wider uppercase">
                           <span className="text-base">⛔</span>
-                          <span>END OF PART 1: STORY SCRIPTWRITER</span>
+                          <span>END OF PART 1: {workflow.part1Title ? workflow.part1Title.replace(/^Part 1:\s*/i, '').toUpperCase() : 'SCREENPLAY'}</span>
                         </div>
                         <div className="h-0.5 sm:h-auto sm:w-px bg-amber-500/40" />
                         <div className="text-[11px] font-semibold text-neutral-300">
-                          Part 1 ends here ── Paste story output into Part 2 below
+                          Part 1 ends here ── Paste story/script output into Part 2 below
                         </div>
                         <div className="h-0.5 sm:h-auto sm:w-px bg-amber-500/40" />
                         <div className="flex items-center gap-2 font-mono font-black text-xs sm:text-sm text-cyan-400 tracking-wider uppercase">
-                          <span>START OF PART 2: 5 CHARACTER SHEETS</span>
+                          <span>START OF PART 2: {workflow.part2Title ? workflow.part2Title.replace(/^Part 2:\s*/i, '').replace(/🎬\s*/, '').toUpperCase() : 'CHARACTER SHEETS'}</span>
                           <span className="text-base">▶</span>
                         </div>
                       </div>
@@ -542,7 +554,7 @@ export const WorkflowDetailModal: React.FC<WorkflowDetailModalProps> = ({
                           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
                             <div className="flex items-center gap-2 font-mono font-black text-xs sm:text-sm text-cyan-400 tracking-wider uppercase">
                               <span className="text-base">⛔</span>
-                              <span>END OF PART 2: CHARACTER SHEETS</span>
+                              <span>END OF PART 2: {workflow.part2Title ? workflow.part2Title.replace(/^Part 2:\s*/i, '').replace(/🎬\s*/, '').toUpperCase() : 'CHARACTER SHEETS'}</span>
                             </div>
                             <div className="h-0.5 sm:h-auto sm:w-px bg-purple-500/40" />
                             <div className="text-[11px] font-semibold text-neutral-300">
@@ -550,7 +562,7 @@ export const WorkflowDetailModal: React.FC<WorkflowDetailModalProps> = ({
                             </div>
                             <div className="h-0.5 sm:h-auto sm:w-px bg-purple-500/40" />
                             <div className="flex items-center gap-2 font-mono font-black text-xs sm:text-sm text-purple-400 tracking-wider uppercase">
-                              <span>START OF PART 3: VIDEO PROMPT GENERATOR</span>
+                              <span>START OF PART 3: {workflow.part3Title ? workflow.part3Title.replace(/^Part 3:\s*/i, '').replace(/🎬\s*/, '').toUpperCase() : 'PROMPT GENERATOR'}</span>
                               <span className="text-base">▶</span>
                             </div>
                           </div>
@@ -564,7 +576,7 @@ export const WorkflowDetailModal: React.FC<WorkflowDetailModalProps> = ({
                                 Part 3
                               </span>
                               <h4 className="text-xs sm:text-sm font-bold text-white">
-                                {workflow.part3Title || 'Stickman Script to 10-Second Video Prompts (Omni Flesh)'}
+                                {workflow.part3Title || 'Part 3 Prompt Engine'}
                               </h4>
                             </div>
                             <button
@@ -582,7 +594,7 @@ export const WorkflowDetailModal: React.FC<WorkflowDetailModalProps> = ({
 
                         {/* FINAL HARD END LINE */}
                         <div className="border-t-4 border-rose-600 bg-neutral-950 px-4 py-2.5 text-center text-rose-300 font-mono text-xs font-bold tracking-wider select-none">
-                          🏁 END OF PART 3 ── ALL 3 PARTS OF STICKMAN ANIMATION MASTER COMPLETE 🏁
+                          🏁 END OF PART 3 ── ALL 3 PARTS OF {workflow.title.replace(/🎬\s*/, '').toUpperCase()} COMPLETE 🏁
                         </div>
                       </>
                     )}
